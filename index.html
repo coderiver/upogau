@@ -4,16 +4,71 @@
 <head>
 	<meta charset="utf-8">
 	<title>Template</title>
-	<meta name="viewport" content="initial-scale=1"/>
-	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<meta name="viewport" content="initial-scale=1">
+	<link rel="stylesheet" media="screen" href="css/screen.css">
+	<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
-<!-- BEGIN  out-->
-<div class="out">
+	<!-- begin header -->
+	<div class="header">
+		<div class="header__in">
+			<div class="header__logo">
+				<a href="#">
+					<img src="http://placehold.it/120x90" alt="logo">
+				</a>
+			</div>
+			<div class="header__main">
+				<div class="header__toolbar">
+					<ul class="social">
+						<li class="social__item social__vk"><a href="#" class="social__href">vk</a></li>
+						<li class="social__item social__fb"><a href="#" class="social__href">fb</a></li>
+						<li class="social__item social__od"><a href="#" class="social__href">od</a></li>
+						<li class="social__item social__tw"><a href="#" class="social__href">tw</a></li>
+					</ul>
+					<div class="search">
+						<input type="text" class="search__query" placeholder="Поиск">
+						<button class="search__submit" type="submit"></button>
+					</div>
+					<div class="userlinks">
+						<ul>
+							<li><a href="#" class="userlinks__signin g-pseudo"><b>Вход</b></a></li>
+							<li><a href="#" class="userlinks__signup g-pseudo">Регистрация</a></li>
+						</ul>
+						<ul class="lang">
+							<li><a href="#">Rus</a></li>
+							<li><a href="#">Eng</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="banner">
+					<img src="http://placehold.it/655x90" alt="banner">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
 
-</div>
-<!-- END out-->
+	<!-- begin nav -->
+	<div class="nav">
+		<ul>
+			<li class="is-active"><a href="#">Новости</a></li>
+			<li><a href="#">О нас</a></li>
+			<li><a href="#">Форум</a></li>
+			<li><a href="#">Фото и видео</a></li>
+			<li><a href="#">Библиотека</a></li>
+			<li><a href="#">Блоги</a></li>
+			<li><a href="#">Контакты</a></li>
+		</ul>
+	</div>
+	<!-- end nav -->
+
+
+	<!-- begin footer -->
+	<div class="footer"></div>
+	<!-- end footer -->
+
 
 <script src="js/head.js" data-headjs-load="js/init.js"></script>
 </body>

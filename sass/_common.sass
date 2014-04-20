@@ -1,49 +1,171 @@
-// # SHORT HOWTO
-// ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
-// 			+s(codedby) //gets default value for spritemap as $icons
-// ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
-// ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
-// ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
-// ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
-//	   horizontal
-//     +gh(#232323, #5c5c5c);
-// ## making bw-images
-//     img
-//			@extend %gray
-// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
-//			display: none
-// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
-//
-// ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
-//			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
-//				display: none
-// ## fonts 
-// Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
-// =book
-// 	font-family: "book",arial,sans-serif 
-	
+// Variables
+// --------------------------------------------------
+$font-base: 'PT Serif', Georgia, Times, "Times New Roman", serif
+$font-alt: 'PT Sans', Arial, "Helvetica Neue", Helvetica, sans-serif
+
 body
-	font-size: 12px 
-	font-family: Arial, sans-serif 
+	font-family: $font-base
+	font-size: 14px
 	line-height: 1.4
+	color: #373636
+	background: #fff
+	min-width: 1020px
+
+// container extend
+%in
+	width: 990px
+	margin: 0 auto
+.container
+	@extend %in
+
+// pseudo links
+.g-pseudo
+	border-bottom: 1px dotted #000
+	text-decoration: none !important
+	&:hover
+		border-bottom: 1px dotted transparent
+		text-decoration: none !important
+
+// Headings
+// --------------------------------------------------
+h1, .h1
+	font-family: $font-base
+	font-size: 24px
+	font-weight: bold
+	color: #000
+h2, .h2
+	font-family: $font-alt
+	font-size: 20px
+	font-weight: bold
+	color: #000
+h3, .h3
+	font-family: $font-alt
+	font-size: 15px
+	font-weight: bold
+	color: #0f0e0e
+
+// Header
+// --------------------------------------------------
+.header
+	font-family: $font-alt
+	margin-bottom: 40px
+.header__in
+	@extend %in
+	padding-top: 35px
+	+clr
+.header__logo
+	float: left
+	width: 120px
+	height: 90px
+	a
+		+hidetext
+	img
+		display: block
+.header__main
+	width: 655px
+	float: right
+.header__toolbar
+	margin-bottom: 30px
+	+clr
+
+// Social buttons
+// --------------------------------------------------
+.social
+	display: inline-block
+.social__href
+	+hidetext
+	display: block
+	height: 100%
+.social__item
+	display: inline-block
+	vertical-align: top
+.social__vk
+	+s(vk)
+.social__fb
+	+s(fb)
+.social__od
+	+s(od)
+.social__tw
+	+s(tw)
+
+// Search form
+// --------------------------------------------------
+.search
+	display: inline-block
+	vertical-align: top
+	position: relative
+.search__query
+	font-family: $font-alt
+	width: 172px
+	height: 28px
+	background: #fff
+	+box
+	border: 1px solid rgba(217,217,217,.5)
+	padding: 0 44px 0 14px
+.search__submit
+	position: absolute
+	top: 50%
+	margin-top: -8px
+	right: 10px
+	+s(search)
+	+hidetext
+
+// User links & languages
+// --------------------------------------------------
+.userlinks
+	float: right
+	display: inline-block
+	vertical-align: top
+	ul
+		display: inline-block
+	li
+		display: inline-block
+	a
+		color: #000
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+
+// Main navigation
+// --------------------------------------------------
+.nav
+	@extend %in
+	border-bottom: 3px solid #d0d0ce
+	margin-bottom: 20px
+	ul
+		+justify
+	li
+		position: relative
+		+justify-child
+		text-align: center
+		font-family: $font-alt
+		font-size: 16px
+		font-weight: bold
+		text-transform: uppercase
+		color: #0f0e0e
+		margin-bottom: -3px
+		&:hover, &.is-active
+			&:before
+				position: absolute
+				bottom: 0
+				right: -3px
+				left: -3px
+				height: 3px
+				background: #fff
+				content: ""
+			a
+				color: #fa6000
+				text-decoration: none
+				border-bottom: 3px solid #fa6000
+	a
+		position: relative
+		z-index: 1
+		display: block
+		color: #0f0e0e
+		text-decoration: none
+		padding: 0 7px 10px
+		line-height: 16px
+		border-bottom: 3px solid transparent
 
 
-// common blocks      
+
