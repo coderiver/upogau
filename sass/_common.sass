@@ -2,6 +2,7 @@
 // --------------------------------------------------
 $font-base: 'PT Serif', Georgia, Times, "Times New Roman", serif
 $font-alt: 'PT Sans', Arial, "Helvetica Neue", Helvetica, sans-serif
+$font-os: 'Open Sans', Arial, "Helvetica Neue", Helvetica, sans-serif
 
 body
 	font-family: $font-base
@@ -17,6 +18,31 @@ body
 	margin: 0 auto
 .container
 	@extend %in
+
+.row
+	+clr
+	margin-left: -20px
+.column
+	float: left
+	width: 315px
+	margin-left: 20px
+
+.section
+	margin-bottom: 30px
+
+.label
+	position: absolute
+	top: 20px
+	left: 20px
+	background: #0f0e0e
+	font-family: $font-os
+	font-size: 12px
+	height: 21px
+	line-height: 21px
+	font-weight: 600
+	color: #fff
+	text-transform: uppercase
+	padding: 0 6px
 
 // pseudo links
 .g-pseudo
@@ -265,6 +291,95 @@ h3, .h3
 .line
 	background-color: #3b3a41
 	height: 200px
+
+// ARTICLE
+// --------------------------------------------------
+.article
+	font-family: $font-alt
+	padding: 10px 0 15px
+	margin-top: -10px
+	&.article_big
+		.article__info
+			height: 350px
+.article__info
+	position: relative
+	width: 315px
+	height: 210px
+	overflow: hidden
+	@include box-shadow(0 1px 3px rgba(0,0,0,.4))
+.article__picture
+	position: relative
+	&:before
+		position: absolute
+		height: 50px
+		left: 0
+		right: 0
+		bottom: 0
+		+opacity(.8)
+		// background-color: #0f0e0e
+		content: ""
+		+g(transparent, #0f0e0e)
+	img
+		display: block
+		max-width: 100%
+		min-height: 100%
+.article__href
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 10
+.article__meta
+	position: absolute
+	bottom: 11px
+	left: 20px
+	.icon-comments
+		margin-right: 4px
+	ul
+		+clr
+	li
+		position: relative
+		float: left
+		font-size: 13px
+		color: #dadbdd
+		padding: 0 11px
+		line-height: 1
+		&:first-child
+			padding: 0 11px 0 0
+			&:before
+				content: none
+		&:before
+			position: absolute
+			height: 15px
+			width: 1px
+			top: 50%
+			left: 0
+			margin-top: -8px
+			content: ""
+			background: #dadbdd
+.article__txt
+	p
+		font-size: 14px
+		color: #373636
+		line-height: 1.2
+		margin-top: 12px
+.article__title
+	padding-top: 15px
+	font-size: 15px
+	font-weight: bold
+	line-height: 1.2
+	color: #0f0e0e
+	a
+		color: inherit
+		text-decoration: none
+
+
+
+
+
+
+
 
 
 
