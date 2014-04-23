@@ -6,7 +6,7 @@
 	<title></title>
 	<meta name="viewport" content="width=1100">
 	<link rel="stylesheet" media="screen" href="css/screen.css">
-	<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -21,12 +21,14 @@
 			</div>
 			<div class="header__main">
 				<div class="header__toolbar">
-					<ul class="social">
-						<li class="social__item social__vk"><a href="#" class="social__href">vk</a></li>
-						<li class="social__item social__fb"><a href="#" class="social__href">fb</a></li>
-						<li class="social__item social__od"><a href="#" class="social__href">od</a></li>
-						<li class="social__item social__tw"><a href="#" class="social__href">tw</a></li>
-					</ul>
+					<div class="social">
+						<ul>
+							<li class="social__item social__vk"><a href="#" class="social__href">vk</a></li>
+							<li class="social__item social__fb"><a href="#" class="social__href">fb</a></li>
+							<li class="social__item social__od"><a href="#" class="social__href">od</a></li>
+							<li class="social__item social__tw"><a href="#" class="social__href">tw</a></li>
+						</ul>
+					</div>
 					<div class="search">
 						<input type="text" class="search__query" placeholder="Поиск">
 						<button class="search__submit" type="submit"></button>
@@ -64,9 +66,60 @@
 	</div>
 	<!-- end nav -->
 
+	<!-- begin line -->
+	<div class="line"></div>
+	<!-- end line -->
 
 	<!-- begin footer -->
-	<div class="footer"></div>
+	<div class="footer">
+		<div class="footer__in">
+			<div class="footer__top">
+				<div class="footer__menu">
+					<div class="footer__title">Разделы сайта</div>
+					<div class="footer__menucols">
+						<ul>
+							<li><a href="#">Новости</a></li>
+							<li><a href="#">О нас</a></li>
+							<li><a href="#">Форум</a></li>
+							<li><a href="#">Фото и видео</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Библиотека</a></li>
+							<li><a href="#">Блоги</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__menu">
+					<div class="footer__title">О проекте</div>
+					<div class="footer__menucols">
+					<ul>
+						<li><a href="#">Реклама на сайте</a></li>
+						<li><a href="#">Обратная связь</a></li>
+						<li><a href="#">Карта сайта</a></li>
+					</ul>
+					</div>
+				</div>
+				<div class="footer__socials">
+					<div class="footer__title">Социальные сети</div>
+					<div class="social">
+						<ul>
+							<li class="social__item social__vk"><a href="#" class="social__href">vk</a></li>
+							<li class="social__item social__fb"><a href="#" class="social__href">fb</a></li>
+							<li class="social__item social__od"><a href="#" class="social__href">od</a></li>
+							<li class="social__item social__tw"><a href="#" class="social__href">tw</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer__copy">
+				<p>При использовании материалов портала www.upogau.org ссылка на сайт обязательна.</p>
+				<p>«Copyright 2013 BezMesh. Все права защищены»</p>
+				<i class="footer__copyicon footer__copyicon_swd"></i>
+				<i class="footer__copyicon"></i>
+			</div>
+		</div>
+	</div>
 	<!-- end footer -->
 
 

@@ -10,7 +10,7 @@ body
 	color: #373636
 	background: #fff
 	min-width: 1020px
-
+	+font-smoothing
 // container extend
 %in
 	width: 990px
@@ -44,14 +44,14 @@ h3, .h3
 	font-weight: bold
 	color: #0f0e0e
 
-// Header
+// HEADER
 // --------------------------------------------------
 .header
 	font-family: $font-alt
-	margin-bottom: 40px
+	margin-bottom: 33px
 .header__in
 	@extend %in
-	padding-top: 35px
+	padding-top: 34px
 	+clr
 .header__logo
 	float: left
@@ -79,6 +79,9 @@ h3, .h3
 .social__item
 	display: inline-block
 	vertical-align: top
+	margin-left: 1px
+	&:first-child
+		margin-left: 0
 .social__vk
 	+s(vk)
 .social__fb
@@ -94,19 +97,27 @@ h3, .h3
 	display: inline-block
 	vertical-align: top
 	position: relative
+	margin-left: 29px
+	padding-top: 5px
 .search__query
 	font-family: $font-alt
-	width: 172px
-	height: 28px
+	width: 174px
+	height: 30px
 	background: #fff
 	+box
 	border: 1px solid rgba(217,217,217,.5)
-	padding: 0 44px 0 14px
+	padding: 0 45px 0 12px
+	font-size: 14px
+	color: #c3c3c3
+	+placeholder-color(#c3c3c3)
+	+box-shadow(0px -1px 1px -1px rgba(#000, .7))
+	&:focus
+		+placeholder-color(transparent)
 .search__submit
 	position: absolute
 	top: 50%
-	margin-top: -8px
-	right: 10px
+	margin-top: -7px
+	right: 13px
 	+s(search)
 	+hidetext
 
@@ -116,22 +127,43 @@ h3, .h3
 	float: right
 	display: inline-block
 	vertical-align: top
+	padding-top: 11px
 	ul
 		display: inline-block
 	li
 		display: inline-block
+		margin-left: 21px
+		&:first-child
+			margin-left: 0
 	a
 		color: #000
 		text-decoration: none
 		&:hover
 			text-decoration: underline
+.lang
+	position: relative
+	padding-left: 22px
+	margin-left: 23px
+	&:before
+		position: absolute
+		top: 50%
+		margin-top: -9px
+		left: 0
+		width: 1px
+		height: 18px
+		background: #7f7f7f
+		content: ""
+	li
+		margin-left: 7px
+		&:first-child
+			margin-left: 0
 
-// Main navigation
+// MAIN NAVIGATION
 // --------------------------------------------------
 .nav
 	@extend %in
 	border-bottom: 3px solid #d0d0ce
-	margin-bottom: 20px
+	margin-bottom: 22px
 	ul
 		+justify
 	li
@@ -163,9 +195,79 @@ h3, .h3
 		display: block
 		color: #0f0e0e
 		text-decoration: none
-		padding: 0 7px 10px
+		padding: 0 8px 12px
 		line-height: 16px
 		border-bottom: 3px solid transparent
+
+// FOOTER
+// --------------------------------------------------
+.footer
+	background: #fff
+	font-family: $font-alt
+	font-size: 15px
+	color: #9d9d9f
+.footer__in
+	@extend %in
+	padding-top: 35px
+	padding-bottom: 13px
+.footer__top
+	padding-bottom: 13px
+	border-bottom: 1px solid #e3e3e3
+	+clr
+.footer__menu
+	float: left
+	margin-right: 5px
+	ul
+		display: inline-block
+		vertical-align: top
+		width: 200px
+		margin-left: 24px
+		&:first-child
+			margin-left: 0
+	a
+		color: #919191
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+.footer__title
+	font-size: 19px
+	font-weight: bold
+	font-family: $font-alt
+	color: #0e0e0e
+	line-height: 1
+	margin-bottom: 11px
+.footer__socials
+	float: left
+	margin-left: 33px
+	.social
+		margin-left: -3px
+.footer__copy
+	position: relative
+	text-align: center
+	min-height: 55px
+	width: 595px
+	padding: 12px 70px 0
+	margin: 10px auto 0
+	p
+		letter-spacing: 0.017em
+		line-height: 1.5
+.footer__copyicon
+	position: absolute
+	top: 1px
+	right: 18px
+	+s(gerb_2)
+.footer__copyicon_swd
+	left: 0
+	right: auto
+	+s(gerb_1)
+
+
+.line
+	background-color: #3b3a41
+	height: 200px
+
+
+
 
 
 
