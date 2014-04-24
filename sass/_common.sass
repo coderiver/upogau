@@ -351,6 +351,16 @@ h3, .h3
 					text-decoration: none
 					&:hover
 						text-decoration: underline
+	&.article_vert
+		width: 170px
+		border-top: none
+		padding: 0
+		.article__info
+			float: none
+			width: 170px
+			height: 140px
+			margin-right: 0
+			margin-bottom: 20px
 	&:first-child
 		padding-top: 0
 		border-top: none
@@ -692,7 +702,42 @@ h3, .h3
 		&.is-active
 			+s(pager_active)
 
-
+.caro-articles
+	// width: 550px
+	margin: 0 50px
+	// padding: 0 50px
+	position: relative
+.caro-articles__in
+	position: relative
+.caro-articles__wrap
+	text-align: center
+	// margin-left: -19px
+	// width: 550px
+	overflow: hidden
+.caro-articles__slide
+	display: inline-block
+	vertical-align: top
+	width: 170px !important
+	// margin-left: 19px
+	margin-right: 17px
+	padding: 0 1px
+	.article
+		white-space: normal
+		text-align: left
+	// width: 170px !important
+.caro-articles__prev,
+.caro-articles__next
+	position: absolute
+	top: 54px
+	+hidetext
+	cursor: pointer
+	+nosel
+.caro-articles__prev
+	left: -50px
+	+s(arrow_left)
+.caro-articles__next
+	right: -50px
+	+s(arrow_right)
 
 
 

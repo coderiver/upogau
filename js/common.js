@@ -6,7 +6,6 @@ $(document).ready(function() {
 		var p = this.parentNode;
 		$(this).cycle({
 			fx: "carousel",
-			// carouselVertical: true,
 			autoHeight: "container",
 			timeout:  0,
 			carouselVisible: 1,
@@ -19,6 +18,26 @@ $(document).ready(function() {
 			slides: $('.blog__slide', p),
 			prev:   $('.blog__prev', p),
 			next:   $('.blog__next', p),
+		});
+
+	});
+
+	$('.js-caroarticles').each(function(){
+		var p = this.parentNode;
+		$(this).cycle({
+			fx: "carousel",
+			autoHeight: "container",
+			timeout:  0,
+			carouselVisible: 3,
+			slideActiveClass: "is-active",
+			pagerActiveClass: "is-active",
+			disabledClass: "is-disabled",
+			slideClass: "caro-articles__slide",
+			allowWrap: true,
+			carouselFluid: "true",
+			slides: $('.caro-articles__slide', p),
+			prev:   $('.caro-articles__prev', p),
+			next:   $('.caro-articles__next', p),
 		});
 
 	});
