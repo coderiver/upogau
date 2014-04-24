@@ -216,12 +216,15 @@ h3, .h3 { font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif
 .blog__topicmeta li { position: relative; display: inline-block; vertical-align: middle; color: #6f6f70; padding: 0 0 0 10px; margin-left: 7px; }
 .blog__topicmeta li:first-child { padding: 0; margin-left: 0; }
 .blog__topicmeta li:first-child:before { content: none; }
-.blog__topicmeta li:before { position: absolute; top: 2px; left: 0; height: 15px; width: 1px; background: #6f6f70; content: ""; }
+.blog__topicmeta li:before { position: absolute; top: -1px; left: 0; height: 15px; width: 1px; background: #6f6f70; content: ""; }
 
 .blog__topicuser { font-weight: bold; color: #1a1a1a; font-size: 13px; }
 .blog__topicuser a { display: block; overflow: hidden; -ms-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; max-width: 150px; height: 100%; color: #1a1a1a; text-decoration: none; }
 
 .blog__topicuserpic { display: inline-block; vertical-align: middle; margin-right: 10px; width: 37px; height: 37px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; }
+
+.banner { background: #f3f2ef; border: 1px solid rgba(0, 0, 0, 0.15); height: 88px; overflow: hidden; }
+.banner img { display: block; width: 100%; height: 100%; }
 
 [class^="icon-"], [class*=" icon-"] { display: inline-block; vertical-align: middle; }
 
