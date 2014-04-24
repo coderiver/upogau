@@ -64,13 +64,13 @@ h3, .h3 { font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif
 .social__item { display: inline-block; vertical-align: top; margin-left: 1px; }
 .social__item:first-child { margin-left: 0; }
 
-.social__vk { background: url('../img/icons-sa078eae10b.png') 0 -238px no-repeat; width: 35px; height: 35px; }
+.social__vk { background: url('../img/icons-s2f2d3da5f3.png') 0 -238px no-repeat; width: 35px; height: 35px; }
 
-.social__fb { background: url('../img/icons-sa078eae10b.png') 0 -283px no-repeat; width: 35px; height: 35px; }
+.social__fb { background: url('../img/icons-s2f2d3da5f3.png') 0 -283px no-repeat; width: 35px; height: 35px; }
 
-.social__od { background: url('../img/icons-sa078eae10b.png') 0 -193px no-repeat; width: 35px; height: 35px; }
+.social__od { background: url('../img/icons-s2f2d3da5f3.png') 0 -193px no-repeat; width: 35px; height: 35px; }
 
-.social__tw { background: url('../img/icons-sa078eae10b.png') 0 -148px no-repeat; width: 35px; height: 35px; }
+.social__tw { background: url('../img/icons-s2f2d3da5f3.png') 0 -148px no-repeat; width: 35px; height: 35px; }
 
 .search { display: inline-block; vertical-align: top; position: relative; margin-left: 29px; padding-top: 5px; }
 
@@ -80,7 +80,7 @@ h3, .h3 { font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif
 .search__query:focus:-moz-placeholder, .search__query:focus::-moz-placeholder { color: transparent; opacity: 1; }
 .search__query:focus::-webkit-input-placeholder { color: transparent; }
 
-.search__submit { position: absolute; top: 50%; margin-top: -7px; right: 13px; background: url('../img/icons-sa078eae10b.png') 0 -328px no-repeat; width: 17px; height: 17px; font: 0/0 a; text-shadow: none; color: transparent; }
+.search__submit { position: absolute; top: 50%; margin-top: -7px; right: 13px; background: url('../img/icons-s2f2d3da5f3.png') 0 -328px no-repeat; width: 17px; height: 17px; font: 0/0 a; text-shadow: none; color: transparent; }
 
 .userlinks { float: right; display: inline-block; vertical-align: top; padding-top: 11px; }
 .userlinks ul { display: inline-block; }
@@ -123,9 +123,9 @@ h3, .h3 { font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif
 .footer__copy { position: relative; text-align: center; min-height: 55px; width: 595px; padding: 12px 70px 0; margin: 10px auto 0; }
 .footer__copy p { letter-spacing: 0.017em; line-height: 1.5; }
 
-.footer__copyicon { position: absolute; top: 1px; right: 18px; background: url('../img/icons-sa078eae10b.png') 0 0 no-repeat; width: 36px; height: 64px; }
+.footer__copyicon { position: absolute; top: 1px; right: 18px; background: url('../img/icons-s2f2d3da5f3.png') 0 0 no-repeat; width: 36px; height: 64px; }
 
-.footer__copyicon_swd { left: 0; right: auto; background: url('../img/icons-sa078eae10b.png') 0 -74px no-repeat; width: 66px; height: 64px; }
+.footer__copyicon_swd { left: 0; right: auto; background: url('../img/icons-s2f2d3da5f3.png') 0 -74px no-repeat; width: 66px; height: 64px; }
 
 .line { background-color: #3b3a41; height: 200px; }
 
@@ -185,11 +185,49 @@ h3, .h3 { font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif
 .tabloid__source { color: #a7a7a8; margin-top: 5px; }
 .tabloid__source a { color: inherit; text-decoration: none; }
 
+.blog { background: #f3f2ef; margin-bottom: 45px; }
+
+.blog__head { padding: 20px; }
+
+.blog__title { margin-bottom: 0; display: inline-block; vertical-align: middle; }
+
+.blog__nav { display: inline-block; vertical-align: middle; margin-left: 22px; }
+.blog__nav span { display: inline-block; vertical-align: middle; margin-left: 6px; font: 0/0 a; text-shadow: none; color: transparent; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: pointer; }
+.blog__nav span:first-child { margin-left: 0; }
+
+.blog__prev { background: url('../img/icons-s2f2d3da5f3.png') 0 -377px no-repeat; width: 8px; height: 12px; }
+
+.blog__next { background: url('../img/icons-s2f2d3da5f3.png') 0 -355px no-repeat; width: 8px; height: 12px; }
+
+.blog__slide { display: inline-block; vertical-align: top; white-space: normal; width: 100%; }
+
+.blog__topic { position: relative; padding: 20px 10px 20px 20px; line-height: 1.2; }
+.blog__topic:before { position: absolute; top: 0; left: 3px; right: 18px; height: 1px; background: #e0eaed; content: ""; }
+
+.blog_topichref { text-decoration: none; }
+.blog_topichref .blog__topictitle { font-size: 16px; color: #1a1a1a; }
+.blog_topichref .blog__topicdesc { font-size: 14px; color: #919087; }
+
+.blog__topictitle { font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; font-size: 16px; color: #1a1a1a; margin-bottom: 10px; }
+
+.blog__topicdesc { font-size: 14px; color: #919087; }
+
+.blog__topicmeta { margin-top: 15px; font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; }
+.blog__topicmeta li { position: relative; display: inline-block; vertical-align: middle; color: #6f6f70; padding: 0 0 0 10px; margin-left: 7px; }
+.blog__topicmeta li:first-child { padding: 0; margin-left: 0; }
+.blog__topicmeta li:first-child:before { content: none; }
+.blog__topicmeta li:before { position: absolute; top: 2px; left: 0; height: 15px; width: 1px; background: #6f6f70; content: ""; }
+
+.blog__topicuser { font-weight: bold; color: #1a1a1a; font-size: 13px; }
+.blog__topicuser a { display: block; overflow: hidden; -ms-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; max-width: 150px; height: 100%; color: #1a1a1a; text-decoration: none; }
+
+.blog__topicuserpic { display: inline-block; vertical-align: middle; margin-right: 10px; width: 37px; height: 37px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; }
+
 [class^="icon-"], [class*=" icon-"] { display: inline-block; vertical-align: middle; }
 
-.icon-comments { background: url('../img/icons-sa078eae10b.png') 0 -385px no-repeat; width: 14px; height: 14px; }
+.icon-comments { background: url('../img/icons-s2f2d3da5f3.png') 0 -429px no-repeat; width: 14px; height: 14px; }
 
-.icon-comments_dark { background: url('../img/icons-sa078eae10b.png') 0 -409px no-repeat; width: 14px; height: 14px; }
+.icon-comments_dark { background: url('../img/icons-s2f2d3da5f3.png') 0 -453px no-repeat; width: 14px; height: 14px; }
 
 h1, .h1 { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-size: 24px; font-weight: bold; color: black; }
 
