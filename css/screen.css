@@ -32,6 +32,8 @@ body { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-s
 
 .label { position: absolute; top: 20px; left: 20px; background: #0f0e0e; font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; font-size: 12px; height: 21px; line-height: 21px; font-weight: 600; color: white; text-transform: uppercase; padding: 0 6px; }
 
+.badge { display: inline-block; vertical-align: middle; position: relative; top: -3px; background: #ff5d25; color: white; text-transform: uppercase; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; font-size: 12px; font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; height: 19px; line-height: 19px; padding: 0 7px; }
+
 .g-pseudo { border-bottom: 1px dotted black; text-decoration: none !important; }
 .g-pseudo:hover { border-bottom: 1px dotted transparent; text-decoration: none !important; }
 
@@ -166,6 +168,22 @@ h3, .h3 { font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif
 
 .article__title { padding-top: 15px; font-size: 15px; font-weight: bold; line-height: 1.2; color: #0f0e0e; }
 .article__title a { color: inherit; text-decoration: none; }
+
+.tabloid { position: relative; padding-bottom: 19px; margin-bottom: 50px; }
+.tabloid:before { width: 190px; height: 3px; background: black; content: ""; position: absolute; bottom: 0; left: 0; }
+
+.tabloid__item { font-size: 14px; font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; line-height: 1.2; border-top: 1px solid black; padding: 16px 0; }
+.tabloid__item:first-child { border-top: none; padding-top: 0; }
+
+.tabloid__date { position: absolute; top: 0; left: 0; color: #fa6000; }
+
+.tabloid__info { position: relative; padding-left: 63px; }
+
+.tabloid__desc { color: #373636; }
+.tabloid__desc a { color: inherit; text-decoration: none; }
+
+.tabloid__source { color: #a7a7a8; margin-top: 5px; }
+.tabloid__source a { color: inherit; text-decoration: none; }
 
 [class^="icon-"], [class*=" icon-"] { display: inline-block; vertical-align: middle; }
 

@@ -44,6 +44,21 @@ body
 	text-transform: uppercase
 	padding: 0 6px
 
+.badge
+	display: inline-block
+	vertical-align: middle
+	position: relative
+	top: -3px
+	background: #ff5d25
+	color: #fff
+	text-transform: uppercase
+	+border-radius(3px)
+	font-size: 12px
+	font-family: $font-alt
+	height: 19px
+	line-height: 19px
+	padding: 0 7px
+
 // pseudo links
 .g-pseudo
 	border-bottom: 1px dotted #000
@@ -417,8 +432,48 @@ h3, .h3
 		color: inherit
 		text-decoration: none
 
-
-
+// TABLOID
+// --------------------------------------------------
+.tabloid
+	position: relative
+	padding-bottom: 19px
+	margin-bottom: 50px
+	&:before
+		width: 190px
+		height: 3px
+		background: #000
+		content: ""
+		position: absolute
+		bottom: 0
+		left: 0
+.tabloid__item
+	font-size: 14px
+	font-family: $font-alt
+	line-height: 1.2
+	border-top: 1px solid #000
+	padding: 16px 0
+	&:first-child
+		border-top: none
+		padding-top: 0
+.tabloid__date
+	position: absolute
+	top: 0
+	left: 0
+	color: #fa6000
+.tabloid__info
+	position: relative
+	padding-left: 63px
+.tabloid__desc
+	color: #373636
+	a
+		color: inherit
+		text-decoration: none
+.tabloid__source
+	color: #a7a7a8
+	margin-top: 5px
+	a
+		color: inherit
+		text-decoration: none
 
 
 
