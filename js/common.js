@@ -23,4 +23,21 @@ $(document).ready(function() {
 
 	});
 
+	$('.js-partners').each(function(){
+		var p = this.parentNode;
+		$(this).cycle({
+			fx: "scrollHorz",
+			timeout:  0,
+			log: false,
+			slideActiveClass: "is-active",
+			pagerActiveClass: "is-active",
+			disabledClass: "is-disabled",
+			slideClass: "partners__slide",
+			slides: $('.partners__slide', p),
+			pager: ".partners__pager",
+			pagerTemplate: "<span>•</span>"
+		});
+
+	});
+
 });
