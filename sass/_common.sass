@@ -294,13 +294,51 @@ h3, .h3
 
 // ARTICLE
 // --------------------------------------------------
+.articles
+	// margin-top: -10px
 .article
 	font-family: $font-alt
 	padding: 10px 0 15px
-	margin-top: -10px
-	&.article_big
+	// margin-top: -10px
+	&.article_lg
 		.article__info
 			height: 350px
+	&.article_sm
+		padding: 20px 0
+		border-top: 1px solid #7f7f7f
+		margin-top: 0
+		+clr
+		.article__info
+			float: left
+			width: 88px
+			height: 84px
+			margin-right: 8px
+		.article__picture
+			img
+				min-width: 100%
+				max-height: 100%
+				max-width: 500px
+				min-height: 1px
+			&:before
+				content: none
+		.article__txt
+			overflow: hidden
+		.article__title
+			padding-top: 8px
+		.article__meta
+			position: static
+			li
+				color: #6f6f70
+				&:before
+					background: #6f6f70
+				a
+					color: #6f6f70
+					text-decoration: none
+					&:hover
+						text-decoration: underline
+	&:first-child
+		padding-top: 0
+		border-top: none
 .article__info
 	position: relative
 	width: 315px
@@ -334,7 +372,7 @@ h3, .h3
 	position: absolute
 	bottom: 11px
 	left: 20px
-	.icon-comments
+	.icon-comments, .icon-comments_dark
 		margin-right: 4px
 	ul
 		+clr
@@ -345,6 +383,11 @@ h3, .h3
 		color: #dadbdd
 		padding: 0 11px
 		line-height: 1
+		a
+			color: #dadbdd
+			text-decoration: none
+			&:hover
+				text-decoration: underline
 		&:first-child
 			padding: 0 11px 0 0
 			&:before
