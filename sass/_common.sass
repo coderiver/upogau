@@ -352,138 +352,6 @@ body
 		right: auto
 		+s(gerb_1)
 
-// ARTICLE
-// --------------------------------------------------
-.article
-	font-family: $font-alt
-	padding: 10px 0 15px
-	&.article_lg
-		.article__info
-			height: 350px
-	&.article_sm
-		padding: 20px 0
-		border-top: 1px solid #7f7f7f
-		margin-top: 0
-		+clr
-		.article__info
-			float: left
-			width: 88px
-			height: 84px
-			margin-right: 8px
-		.article__picture
-			img
-				min-width: 100%
-				max-height: 100%
-				max-width: 500px
-				min-height: 1px
-			&:before
-				content: none
-		.article__txt
-			overflow: hidden
-		.article__title
-			padding-top: 8px
-		.article__meta
-			position: static
-			li
-				color: #6f6f70
-				&:before
-					background: #6f6f70
-				a
-					color: #6f6f70
-					text-decoration: none
-					&:hover
-						text-decoration: underline
-	&.article_vert
-		width: 170px
-		border-top: none
-		padding: 0
-		.article__info
-			float: none
-			width: 170px
-			height: 140px
-			margin-right: 0
-			margin-bottom: 20px
-	&:first-child
-		padding-top: 0
-		border-top: none
-	.article__info
-		position: relative
-		width: 315px
-		height: 210px
-		overflow: hidden
-		@include box-shadow(0 1px 3px rgba(0,0,0,.4))
-	.article__picture
-		position: relative
-		&:before
-			position: absolute
-			height: 50px
-			left: 0
-			right: 0
-			bottom: 0
-			+opacity(.8)
-			// background-color: #0f0e0e
-			content: ""
-			+g(transparent, #0f0e0e)
-		img
-			display: block
-			max-width: 100%
-			min-height: 100%
-	.article__href
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		bottom: 0
-		z-index: 10
-	.article__meta
-		position: absolute
-		bottom: 11px
-		left: 20px
-		.icon-comments, .icon-comments_dark
-			margin-right: 4px
-		ul
-			+clr
-		li
-			position: relative
-			float: left
-			font-size: 13px
-			color: #dadbdd
-			padding: 0 11px
-			line-height: 1
-			a
-				color: #dadbdd
-				text-decoration: none
-				&:hover
-					text-decoration: underline
-			&:first-child
-				padding: 0 11px 0 0
-				&:before
-					content: none
-			&:before
-				position: absolute
-				height: 15px
-				width: 1px
-				top: 50%
-				left: 0
-				margin-top: -8px
-				content: ""
-				background: #dadbdd
-	.article__txt
-		p
-			font-size: 14px
-			color: #373636
-			line-height: 1.2
-			margin-top: 12px
-	.article__title
-		padding-top: 15px
-		font-size: 15px
-		font-weight: bold
-		line-height: 1.2
-		color: #0f0e0e
-		a
-			color: inherit
-			text-decoration: none
-
 // TABLOID
 // --------------------------------------------------
 .tabloid
@@ -815,5 +683,165 @@ body
 		font-weight: bold
 		font-size: 15px
 		line-height: 1.2
+
+// TOPSECTION
+// --------------------------------------------------
+.topsection
+	+clr
+	height: 375px
+	background-color: #37373e
+	.topsection__left
+		float: left
+		width: 655px
+	.topsection__right
+		overflow: hidden
+
+// ARTICLE
+// --------------------------------------------------
+.article
+	font-family: $font-alt
+	padding: 10px 0 15px
+	&.article_lg
+		.article__info
+			height: 350px
+	&.article_extra
+		padding: 0
+		margin-bottom: 30px
+		.article__info
+			height: 375px
+			width: 100%
+		.article__picture
+			&:before
+				height: 205px
+		.article__title
+			color: #fff
+			font-size: 20px
+			margin-bottom: 15px
+	&.article_sm
+		padding: 20px 0
+		border-top: 1px solid #7f7f7f
+		margin-top: 0
+		+clr
+		.article__info
+			float: left
+			width: 88px
+			height: 84px
+			margin-right: 8px
+		.article__picture
+			&:before
+				content: none
+		.article__txt
+			overflow: hidden
+		.article__title
+			padding-top: 8px
+		.article__meta
+			position: static
+			li
+				color: #6f6f70
+				&:before
+					background: #6f6f70
+				a
+					color: #6f6f70
+					text-decoration: none
+					&:hover
+						text-decoration: underline
+	&.article_vert
+		width: 170px
+		border-top: none
+		padding: 0
+		.article__info
+			float: none
+			width: 170px
+			height: 140px
+			margin-right: 0
+			margin-bottom: 20px
+	&:first-child
+		padding-top: 0
+		border-top: none
+	.article__info
+		position: relative
+		width: 315px
+		height: 210px
+		overflow: hidden
+		@include box-shadow(0 1px 3px rgba(0,0,0,.4))
+	.article__picture
+		position: relative
+		&:before
+			position: absolute
+			height: 50px
+			left: 0
+			right: 0
+			bottom: 0
+			+opacity(.8)
+			// background-color: #0f0e0e
+			content: ""
+			+g(transparent, #0f0e0e)
+		img
+			display: block
+			min-width: 100%
+			max-height: 100%
+	.article__href
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 10
+	.article__meta
+		position: absolute
+		bottom: 11px
+		left: 20px
+		.icon-comments, .icon-comments_dark
+			margin-right: 4px
+		ul
+			+clr
+		li
+			position: relative
+			float: left
+			font-size: 13px
+			color: #dadbdd
+			padding: 0 11px
+			line-height: 1
+			a
+				color: #dadbdd
+				text-decoration: none
+				&:hover
+					text-decoration: underline
+			&:first-child
+				padding: 0 11px 0 0
+				&:before
+					content: none
+			&:before
+				position: absolute
+				height: 15px
+				width: 1px
+				top: 50%
+				left: 0
+				margin-top: -8px
+				content: ""
+				background: #dadbdd
+	.article__txt
+		p
+			font-size: 14px
+			color: #373636
+			line-height: 1.2
+			margin-top: 12px
+	.article__title
+		padding-top: 15px
+		font-size: 15px
+		font-weight: bold
+		line-height: 1.2
+		color: #0f0e0e
+		a
+			color: inherit
+			text-decoration: none
+
+
+
+
+
+
+
+
 
 
