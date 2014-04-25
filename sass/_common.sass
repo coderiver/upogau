@@ -1285,9 +1285,63 @@ body
 
 
 
+.slideshow
+	.slideshow__next,
+	.slideshow__prev
+		position: absolute
+		top: 50%
+		margin-top: -14px
+		+hidetext
+		+nosel
+		cursor: pointer
+	.slideshow__prev
+		left: 0
+		+s(arr_prev)
+	.slideshow__next
+		right: 0
+		+s(arr_next)
 
+	.slideshow__main
+		margin-bottom: 10px
+		> div
+			width: 650px
+			height: 435px
+			overflow: hidden
+			img
+				display: block
+				min-width: 100%
+				max-height: 100%
 
-
-
-
+	.slideshow__slidepreview
+		position: relative
+		.slideshow__preview-overlay
+			position: relative
+			&:before
+				position: absolute
+				top: 3px
+				left: 6px
+				right: 0
+				bottom: 3px
+				content: ""
+				@include opacity(.7)
+				background-color: #000
+		.cycle-slideshow
+			margin: 0 20px
+		.cycle-slide
+			width: 111px !important
+			height: 116px
+			margin-right: 12px
+			margin-bottom: 2px
+			cursor: pointer
+		.cycle-slide-active
+			.slideshow__preview-overlay
+				&:before
+					content: none
+		img
+			display: block
+			width: 105px
+			height: 110px
+			border: 3px solid #fff
+			margin: 3px
+			@include box-shadow(0 0 3px rgba(76,76,76,.13))
 
