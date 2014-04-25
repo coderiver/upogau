@@ -25,8 +25,8 @@ h2, .h2 { font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif
 
 h3, .h3 { font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; font-size: 15px; font-weight: bold; color: #0f0e0e; }
 
-.h-bordered { font-size: 20px; font-weight: bold; font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; line-height: 1; border-bottom: 3px solid black; margin-bottom: 30px; }
-.h-bordered.h-bordered_mod { margin-right: 130px; }
+.h-bordered { font-size: 20px; font-weight: bold; font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; line-height: 1; border-bottom: 3px solid black; margin-bottom: 30px; margin-right: 135px; }
+.h-bordered.h-bordered_mod { margin-right: 0; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
