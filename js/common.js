@@ -1,5 +1,28 @@
 $(document).ready(function() {
 
+	function tabs() {
+		var el = $('.js-tabs'),
+				el_navitem = el.find('.tabs__navitem'),
+				el_list = el.find('.tabs__content'),
+				el_item = el.find('.tabs__pane');
+
+
+		el_navitem.on('click', function() {
+			el.find('.tabs__navitem').removeClass('is-active');
+			$(this).addClass('is-active');
+			return false;
+		});
+
+		$('.tabs__navitem').each(function() {
+			var el_tab = $(this).attr("href");
+			$(this).on('click', function() {
+				$('.tabs__content').find('.tabs__pane').removeClass('is-open');
+				$(el_tab).addClass('is-open');
+			});
+		});
+
+	} tabs();
+
 	$('.js-blogs').each(function(){
 		var p = this.parentNode;
 		$(this).cycle({

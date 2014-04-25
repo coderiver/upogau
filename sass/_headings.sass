@@ -62,6 +62,33 @@ h3, .h3
 			content: ""
 			width: 1000em
 
+.h-centered
+	font-family: $font-alt
+	font-size: 24px
+	color: #0e0e0e
+	line-height: 1
+	text-transform: uppercase
+	margin: 0 auto
+	text-align: center
+	letter-spacing: 0.03em
+	margin-bottom: 35px
+	span
+		display: inline-block
+		position: relative
+		padding: 0 52px
+		&:before,
+		&:after
+			position: absolute
+			top: 50%
+			margin-top: -2px
+			width: 32px
+			height: 3px
+			background: #000
+			content: ""
+		&:before
+			left: 0
+		&:after
+			right: 0
 
 
 
