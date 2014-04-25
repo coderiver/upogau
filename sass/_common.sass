@@ -1390,14 +1390,18 @@ body
 	right: 0
 	bottom: 0
 	left: 0
-	z-index: 1050
-	background: rgba(#000, .6)
 	-webkit-overflow-scrolling: touch
 	outline: 0
-	+transition(opacity .15s linear)
+	opacity: 0
+	// +transition(all .15s linear)
+	z-index: 1050
 	&.is-open
+		background: rgba(#000, .6)
 		display: block
 		opacity: 1
+		.popup
+			// +translate(0)
+			display: block
 
 .popup
 	position: relative
@@ -1405,6 +1409,9 @@ body
 	margin: 30px auto
 	background: #fff
 	+border-radius(3px)
+	display: none
+	// +transition(transform .1s ease-out)
+	// +translate(0,-25%)
 	.popup__close
 		position: absolute
 		top: 46px

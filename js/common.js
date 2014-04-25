@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+	function popup() {
+		$('.overlay, .popup__close').on('click', function() {
+			$('body').removeClass('has-popup');
+			$('.overlay').removeClass('is-open');
+		});
+	} popup();
+
 	function tabs() {
 		var el = $('.js-tabs'),
 				el_navitem = el.find('.tabs__navitem'),

@@ -445,10 +445,11 @@ body { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-s
 
 .has-popup { overflow: hidden; }
 
-.overlay { display: none; overflow: auto; overflow-y: scroll; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1050; background: rgba(0, 0, 0, 0.6); -webkit-overflow-scrolling: touch; outline: 0; -webkit-transition: opacity 0.15s linear; -moz-transition: opacity 0.15s linear; -o-transition: opacity 0.15s linear; transition: opacity 0.15s linear; }
-.overlay.is-open { display: block; opacity: 1; }
+.overlay { display: none; overflow: auto; overflow-y: scroll; position: fixed; top: 0; right: 0; bottom: 0; left: 0; -webkit-overflow-scrolling: touch; outline: 0; opacity: 0; z-index: 1050; }
+.overlay.is-open { background: rgba(0, 0, 0, 0.6); display: block; opacity: 1; }
+.overlay.is-open .popup { display: block; }
 
-.popup { position: relative; width: 780px; margin: 30px auto; background: white; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
+.popup { position: relative; width: 780px; margin: 30px auto; background: white; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; display: none; }
 .popup .popup__close { position: absolute; top: 46px; right: 52px; background: url('../img/icons-s8d13352b73.png') 0 -1186px no-repeat; width: 11px; height: 11px; cursor: pointer; }
 .popup .popup__in { padding: 42px 50px; }
 .popup .popup__columns { *zoom: 1; font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-size: 16px; font-weight: bold; color: black; line-height: 1.1; position: relative; }
