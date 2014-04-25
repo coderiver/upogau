@@ -183,7 +183,7 @@ body { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-s
 .banner img { display: block; width: 100%; height: 100%; }
 
 .vote { margin-bottom: 50px; }
-.vote .h-bordered { margin-bottom: 25px; margin-right: 0; }
+.vote .h-bordered { margin-bottom: 25px; }
 .vote .vote__in { font-size: 16px; color: #333333; font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; line-height: 1.2; }
 .vote .vote__desc { margin-bottom: 10px; }
 .vote .vote__action { *zoom: 1; margin-right: 25px; }
@@ -294,3 +294,10 @@ body { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-s
 .mainslider .mainslider__prev, .mainslider .mainslider__next { position: absolute; top: 50%; margin-top: -20px; cursor: pointer; z-index: 100; font: 0/0 a; text-shadow: none; color: transparent; }
 .mainslider .mainslider__prev { left: 10px; background: url('../img/icons-sf5b238396e.png') 0 -649px no-repeat; width: 21px; height: 39px; }
 .mainslider .mainslider__next { right: 10px; background: url('../img/icons-sf5b238396e.png') 0 -600px no-repeat; width: 21px; height: 39px; }
+
+.cabinet { font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; font-size: 16px; margin-bottom: 25px; line-height: 1.2; }
+.cabinet .h-bordered { margin-bottom: 15px; }
+.cabinet .cabinet__links li { font-weight: bold; margin-bottom: 5px; }
+.cabinet .cabinet__links li.cabinet__message { color: #9e9e9e; font-weight: normal; }
+.cabinet .cabinet__links li .marked { color: #fa6000; }
+.cabinet .cabinet__links a { text-decoration: none; color: #333333; }
