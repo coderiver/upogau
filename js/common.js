@@ -42,6 +42,28 @@ $(document).ready(function() {
 
 	});
 
+	$('.js-mainslider').each(function(){
+		var p = this.parentNode;
+		$(this).cycle({
+			fx: "carousel",
+			// autoHeight: "container",
+			timeout:  0,
+			carouselVisible: 1,
+			slideActiveClass: "is-active",
+			pagerActiveClass: "is-active",
+			disabledClass: "is-disabled",
+			slideClass: "mainslider__slide",
+			allowWrap: true,
+			carouselFluid: "true",
+			slides: $('.mainslider__slide', p),
+			prev:   $('.mainslider__prev', p),
+			next:   $('.mainslider__next', p),
+			pager: ".mainslider__pager",
+			pagerTemplate: "<span>•</span>"
+		});
+
+	});
+
 	$('.js-partners').each(function(){
 		var p = this.parentNode;
 		$(this).cycle({

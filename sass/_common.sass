@@ -690,6 +690,7 @@ body
 	+clr
 	height: 375px
 	background-color: #37373e
+	margin-bottom: 30px
 	.topsection__left
 		float: left
 		width: 655px
@@ -706,7 +707,7 @@ body
 			height: 350px
 	&.article_extra
 		padding: 0
-		margin-bottom: 30px
+		// margin-bottom: 30px
 		.article__info
 			height: 375px
 			width: 100%
@@ -717,6 +718,8 @@ body
 			color: #fff
 			font-size: 20px
 			margin-bottom: 15px
+		.article__meta
+			bottom: 25px
 	&.article_sm
 		padding: 20px 0
 		border-top: 1px solid #7f7f7f
@@ -837,6 +840,44 @@ body
 			text-decoration: none
 
 
+// MAIN SLIDER
+// --------------------------------------------------
+.mainslider
+	position: relative
+	.mainslider__in
+	.mainslider__slide
+		white-space: normal
+		width: 100%
+	.mainslider__pager
+		position: absolute
+		bottom: 25px
+		left: 0
+		right: 0
+		text-align: center
+		z-index: 100
+		span
+			display: inline-block
+			vertical-align: middle
+			cursor: pointer
+			padding: 0 5px
+			+hidetext
+			+s(pager_2)
+			&.is-active
+				+s(pager_active_2)
+	.mainslider__prev,
+	.mainslider__next
+		position: absolute
+		top: 50%
+		margin-top: -20px
+		cursor: pointer
+		z-index: 100
+		+hidetext
+	.mainslider__prev
+		left: 10px
+		+s(arrow_left_2)
+	.mainslider__next
+		right: 10px
+		+s(arrow_right_2)
 
 
 
