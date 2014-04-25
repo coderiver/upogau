@@ -1172,6 +1172,22 @@ body
 		width: 205px
 		&:first-child
 			margin-left: 0
+	.materials__inner
+		.materials__cols
+			position: relative
+			padding: 16px 0 15px
+			&:before
+				position: absolute
+				top: 0
+				left: 0
+				right: 135px
+				height: 1px
+				background: #ccc
+				content: ""
+			&:first-child
+				padding-top: 0
+				&:before
+					content: none
 
 // Comments
 // --------------------------------------------------

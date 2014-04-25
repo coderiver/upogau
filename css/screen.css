@@ -27,6 +27,7 @@ h3, .h3 { font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif
 
 .h-bordered { font-size: 20px; font-weight: bold; font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; line-height: 1; border-bottom: 3px solid black; margin-bottom: 30px; margin-right: 135px; }
 .h-bordered.h-bordered_mod { margin-right: 0; }
+.h-bordered.h-bordered_alt span { display: inline-block; color: white; background: black; padding: 5px 7px 0; }
 
 .h-line { font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; color: black; font-size: 20px; font-weight: bold; line-height: 1.2; margin-bottom: 40px; margin-right: 45px; overflow: hidden; }
 .h-line > span { display: inline-block; position: relative; padding-right: 20px; }
@@ -377,6 +378,10 @@ body { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-s
 .materials .materials__cols:after { content: " "; display: table; clear: both; }
 .materials .materials__column { float: left; margin-left: 17px; width: 205px; }
 .materials .materials__column:first-child { margin-left: 0; }
+.materials .materials__inner .materials__cols { position: relative; padding: 16px 0 15px; }
+.materials .materials__inner .materials__cols:before { position: absolute; top: 0; left: 0; right: 135px; height: 1px; background: #cccccc; content: ""; }
+.materials .materials__inner .materials__cols:first-child { padding-top: 0; }
+.materials .materials__inner .materials__cols:first-child:before { content: none; }
 
 .comments { margin-bottom: 40px; }
 
