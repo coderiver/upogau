@@ -379,3 +379,15 @@ body { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-s
 .materials .materials__column:first-child { margin-left: 0; }
 
 .comments { margin-bottom: 40px; }
+
+.comment { margin-bottom: 20px; font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; font-size: 13px; line-height: 1.2; *zoom: 1; }
+.comment:after { content: " "; display: table; clear: both; }
+.comment .comment { margin-left: 25px; margin-top: 20px; margin-bottom: 0; }
+.comment .comment__userpic { float: left; width: 80px; }
+.comment .comment__message { overflow: hidden; margin-left: 100px; }
+.comment .comment__info { margin-bottom: 15px; }
+.comment .comment__username { display: inline-block; font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; font-weight: bold; color: #fb8033; }
+.comment .comment__date { color: #848383; margin-left: 12px; }
+.comment .comment__txt { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; margin-bottom: 15px; }
+.comment .comment__reply { font-size: 14px; color: #0e0e0e; }
+.comment .comment__reply a { color: inherit; text-decoration: none; }
