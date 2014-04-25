@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-	console.log('im ok');
-
 	$('.js-blogs').each(function(){
 		var p = this.parentNode;
 		$(this).cycle({
@@ -19,7 +17,6 @@ $(document).ready(function() {
 			prev:   $('.blog__prev', p),
 			next:   $('.blog__next', p),
 		});
-
 	});
 
 	$('.js-caroarticles').each(function(){
@@ -39,7 +36,6 @@ $(document).ready(function() {
 			prev:   $('.caro-articles__prev', p),
 			next:   $('.caro-articles__next', p),
 		});
-
 	});
 
 	$('.js-mainslider').each(function(){
@@ -61,7 +57,6 @@ $(document).ready(function() {
 			pager: ".mainslider__pager",
 			pagerTemplate: "<span>•</span>"
 		});
-
 	});
 
 	$('.js-partners').each(function(){
@@ -78,51 +73,16 @@ $(document).ready(function() {
 			pager: ".partners__pager",
 			pagerTemplate: "<span>•</span>"
 		});
-
 	});
 
+	// SLIDESHOW
 	var slideshows = $('.cycle-slideshow').on('cycle-next cycle-prev', function(e, opts) {
-	    // advance the other slideshow
-	    slideshows.not(this).cycle('goto', opts.currSlide);
+		// advance the other slideshow
+		slideshows.not(this).cycle('goto', opts.currSlide);
 	});
-
 	$('#cycle-2 .cycle-slide').click(function(){
-	    var index = $('#cycle-2').data('cycle.API').getSlideIndex(this);
-	    slideshows.cycle('goto', index);
+		var index = $('#cycle-2').data('cycle.API').getSlideIndex(this);
+		slideshows.cycle('goto', index);
 	});
-
-
-	$('.js-caro-main').cycle({
-			fx: "carousel",
-			// autoHeight: "container",
-			timeout:  0,
-			allowWrap: false,
-			carouselFluid: true,
-			carouselVisible: 1,
-			slideActiveClass: "is-active",
-			pagerActiveClass: "is-active",
-			disabledClass: "is-disabled",
-			slideClass: "slideshow__slide",
-			slides: '.slideshow__slide',
-			prev: '.slideshow__prev',
-			next: '.slideshow__next'
-	});
-	$('.js-caro-preview').cycle({
-			fx: "carousel",
-			// autoHeight: "container",
-			timeout:  0,
-			carouselVisible: 5,
-			slideActiveClass: "is-active",
-			pagerActiveClass: "is-active",
-			disabledClass: "is-disabled",
-			slideClass: "slideshow__slide",
-			allowWrap: false,
-			carouselFluid: true,
-			slides: '.slideshow__slide',
-			prev: '.slideshow__prev',
-			next: '.slideshow__next'
-	});
-
-
 
 });
