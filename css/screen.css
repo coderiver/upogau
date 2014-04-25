@@ -28,6 +28,10 @@ h3, .h3 { font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif
 .h-bordered { font-size: 20px; font-weight: bold; font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; line-height: 1; border-bottom: 3px solid black; margin-bottom: 30px; margin-right: 135px; }
 .h-bordered.h-bordered_mod { margin-right: 0; }
 
+.h-line { font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; color: black; font-size: 20px; font-weight: bold; line-height: 1.2; margin-bottom: 40px; margin-right: 45px; overflow: hidden; }
+.h-line > span { display: inline-block; position: relative; padding-right: 20px; }
+.h-line > span:before { position: absolute; top: 50%; margin-top: -1px; left: 100%; height: 3px; background: black; content: ""; width: 1000em; }
+
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-main { float: left; width: 650px; }
@@ -373,3 +377,5 @@ body { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-s
 .materials .materials__cols:after { content: " "; display: table; clear: both; }
 .materials .materials__column { float: left; margin-left: 17px; width: 205px; }
 .materials .materials__column:first-child { margin-left: 0; }
+
+.comments { margin-bottom: 40px; }
