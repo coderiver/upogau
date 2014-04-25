@@ -297,6 +297,10 @@ body
 	font-family: $font-alt
 	font-size: 15px
 	color: #9d9d9f
+	&.footer_mod
+		.footer__in
+			padding-top: 38px
+			border-top: 3px solid #939393
 	.footer__in
 		@extend %in
 		padding-top: 35px
@@ -737,6 +741,24 @@ body
 	&.article_lg
 		.article__info
 			height: 350px
+	&.article_horz
+		+clr
+		.article__info
+			float: left
+			width: 318px
+			height: 211px
+			margin-right: 22px
+		.article__picture
+			img
+				max-height: none
+		.article__txt
+			overflow: hidden
+		.article__meta
+			position: static
+			li
+				color: #6f6f70
+				&:before
+					background: #6f6f70
 	&.article_extra
 		padding: 0
 		// margin-bottom: 30px
@@ -933,6 +955,112 @@ body
 		a
 			text-decoration: none
 			color: #333
+
+// BREADCRUMBS
+// --------------------------------------------------
+.breadcrumbs
+	margin-bottom: 28px
+	ul
+		+clr
+	li
+		position: relative
+		float: left
+		font-family: $font-alt
+		font-size: 16px
+		color: #9e9e9e
+		line-height: 1.2
+		a
+			display: inline-block
+			vertical-align: middle
+			color: inherit
+			text-decoration: none
+		&:before
+			display: inline-block
+			vertical-align: middle
+			content: "/"
+			padding: 0 5px
+		&:first-child
+			&:before
+				content: none
+
+// CATEGORY
+// --------------------------------------------------
+.category
+	margin-bottom: 40px
+	.category__list
+		.article_horz
+			position: relative
+			padding-top: 20px
+			margin-top: 22px
+			padding-bottom: 0
+			&:first-child
+				padding-top: 0
+				margin-top: 0
+				&:before
+					content: none
+			&:before
+				position: absolute
+				top: 0
+				left: 0
+				right: 135px
+				height: 1px
+				background: #ccc
+				content: ""
+
+// PAGINATOR
+// --------------------------------------------------
+.paginator
+	position: relative
+	font-family: $font-alt
+	font-size: 16px
+	margin-bottom: 45px
+	a
+		color: #372f2b
+		text-decoration: none
+	.paginator__prev,
+	.paginator__next
+		position: absolute
+		top: -2px
+		text-transform: uppercase
+		a
+			display: block
+			color: #c0c0c0
+		&.is-active
+			a
+				color: #372f2b
+		i
+			position: relative
+			top: -2px
+			display: inline-block
+			vertical-align: middle
+	.paginator__prev
+		left: 0
+		&.is-active
+			i
+				+s(paginator_prev)
+		i
+			margin-right: 10px
+			+s(paginator_prev_inactive)
+	.paginator__next
+		right: 0
+		&.is-active
+			i
+				+s(paginator_next)
+		i
+			margin-left: 10px
+			+s(paginator_next_inactive)
+	.paginator__list
+		text-align: center
+		.is-current,
+		a
+			padding: 0 10px
+		.is-current
+			color: #c0c0c0
+
+
+
+
+
 
 
 
