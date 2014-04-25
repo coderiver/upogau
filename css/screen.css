@@ -19,11 +19,11 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-h1, .h1 { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-size: 24px; font-weight: bold; color: black; }
+h1, .h1 { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-size: 24px; line-height: 1.2; margin-bottom: 10px; font-weight: bold; color: black; }
 
-h2, .h2 { font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; font-size: 20px; font-weight: bold; color: black; }
+h2, .h2 { font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; font-size: 20px; line-height: 1.2; margin-bottom: 10px; font-weight: bold; color: black; }
 
-h3, .h3 { font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; font-size: 15px; font-weight: bold; color: #0f0e0e; }
+h3, .h3 { font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; font-size: 15px; line-height: 1.2; margin-bottom: 10px; font-weight: bold; color: #0f0e0e; }
 
 .h-bordered { font-size: 20px; font-weight: bold; font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; line-height: 1; border-bottom: 3px solid black; margin-bottom: 30px; margin-right: 135px; }
 .h-bordered.h-bordered_mod { margin-right: 0; }
@@ -340,3 +340,36 @@ body { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-s
 .paginator .paginator__list { text-align: center; }
 .paginator .paginator__list .is-current, .paginator .paginator__list a { padding: 0 10px; }
 .paginator .paginator__list .is-current { color: silver; }
+
+.topic { margin-bottom: 30px; }
+.topic .h1 { margin-bottom: 20px; }
+.topic p { margin-bottom: 20px; }
+
+.media { position: relative; margin-bottom: 25px; -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
+.media .media__picture { position: relative; height: 100%; overflow: hidden; }
+.media .media__picture:before { position: absolute; height: 50px; left: 0; right: 0; bottom: 0; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; content: ""; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, transparent), color-stop(100%, #0f0e0e)); background-image: -webkit-linear-gradient(transparent, #0f0e0e); background-image: -moz-linear-gradient(transparent, #0f0e0e); background-image: -o-linear-gradient(transparent, #0f0e0e); background-image: linear-gradient(transparent, #0f0e0e); }
+.media .media__picture img { display: block; width: 100%; }
+.media .media__href { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 10; }
+.media .media__meta { position: absolute; bottom: 11px; left: 20px; }
+.media .media__meta .icon-comments, .media .media__meta .icon-comments_dark { margin-right: 4px; }
+.media .media__meta ul { *zoom: 1; }
+.media .media__meta ul:after { content: " "; display: table; clear: both; }
+.media .media__meta li { position: relative; float: left; font-size: 13px; color: #dadbdd; padding: 0 11px; line-height: 1; }
+.media .media__meta li a { color: #dadbdd; text-decoration: none; }
+.media .media__meta li a:hover { text-decoration: underline; }
+.media .media__meta li:first-child { padding: 0 11px 0 0; }
+.media .media__meta li:first-child:before { content: none; }
+.media .media__meta li:before { position: absolute; height: 15px; width: 1px; top: 50%; left: 0; margin-top: -8px; content: ""; background: #dadbdd; }
+
+.source { margin-top: 20px; padding: 20px 0 30px; border: 1px solid #dadada; border-width: 1px 0; position: relative; font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; font-size: 14px; line-height: 1.2; }
+.source > span { display: block; color: #848383; }
+.source > a { color: black; text-decoration: none; }
+.source .share { position: absolute; top: 30px; right: 0; }
+
+.materials { margin-bottom: 40px; }
+.materials .article { width: 100%; }
+.materials .article .article__info { width: 100%; height: 175px; }
+.materials .materials__cols { *zoom: 1; }
+.materials .materials__cols:after { content: " "; display: table; clear: both; }
+.materials .materials__column { float: left; margin-left: 17px; width: 205px; }
+.materials .materials__column:first-child { margin-left: 0; }
