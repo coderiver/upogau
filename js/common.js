@@ -30,6 +30,35 @@ $(document).ready(function() {
 
 	} tabs();
 
+	function moveUp() {
+		$(".js-up").click(function (){
+			var page = $(this).attr("href");
+
+			$('html, body').animate({
+				scrollTop: $(page).offset().top
+			}, 500);
+			return false;
+		});
+
+		// function visibleUp() {
+		// 	var top = ($('.page').offset().top);
+
+		// 	if($(window).scrollTop() > top){
+		// 			$(".js-up").addClass('is-visible');
+		// 	}
+		// 	if($(window).scrollTop() < top){
+		// 			$(".js-up").removeClass('is-visible');
+		// 	}
+		// }
+
+		// $(window).scroll(function() {
+		// 	if ($('.js-up').length) {
+		// 		visibleUp();
+		// 	}
+		// });
+	} moveUp();
+
+
 	$('.js-blogs').each(function(){
 		var p = this.parentNode;
 		$(this).cycle({
