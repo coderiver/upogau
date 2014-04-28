@@ -56,6 +56,10 @@ body
 	color: #fff
 	text-transform: uppercase
 	padding: 0 6px
+	z-index: 100
+	a
+		color: #fff
+		text-decoration: none
 
 // badge
 .badge
@@ -381,11 +385,14 @@ body
 		position: absolute
 		top: 1px
 		right: 18px
-		+s(gerb_2)
+		i
+			display: block
+			+s(gerb_2)
 	.footer__copyicon_swd
 		left: 0
 		right: auto
-		+s(gerb_1)
+		i
+			+s(gerb_1)
 
 // TABLOID
 // --------------------------------------------------
@@ -879,6 +886,7 @@ body
 		position: absolute
 		bottom: 11px
 		left: 20px
+		right: 20px
 		.icon-comments, .icon-comments_dark
 			margin-right: 4px
 		ul
@@ -947,6 +955,7 @@ body
 			padding: 0 5px
 			+hidetext
 			+s(pager_2)
+			+nosel
 			&.is-active
 				+s(pager_active_2)
 	.mainslider__prev,
@@ -960,9 +969,11 @@ body
 	.mainslider__prev
 		left: 10px
 		+s(arrow_left_2)
+		+nosel
 	.mainslider__next
 		right: 10px
 		+s(arrow_right_2)
+		+nosel
 
 // CABINET
 // --------------------------------------------------
