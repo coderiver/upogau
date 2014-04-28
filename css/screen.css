@@ -273,7 +273,7 @@ body { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-s
 .articles.articles_topsection .article_sm { position: relative; height: 125px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding-top: 17px; padding-bottom: 0; border: none; }
 .articles.articles_topsection .article_sm:before { position: absolute; top: 0; left: 0; right: 0; height: 1px; background: #2a2b2b; content: ""; -webkit-box-shadow: 0 1px 0 #565657; -moz-box-shadow: 0 1px 0 #565657; box-shadow: 0 1px 0 #565657; }
 .articles.articles_topsection .article_sm:first-child:before { content: none; }
-.articles.articles_topsection .article_sm .article__txt { height: 95px; overflow: hidden; }
+.articles.articles_topsection .article_sm .article__txt { height: 95px; overflow: hidden; padding-right: 20px; }
 .articles.articles_topsection .article_sm .article__title { color: #dadbdd; }
 .articles.articles_topsection .article_sm .article__meta li { color: #dadbdd; }
 
