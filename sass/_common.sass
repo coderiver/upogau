@@ -293,40 +293,72 @@ body
 	@extend %in
 	border-bottom: 3px solid #d0d0ce
 	margin-bottom: 22px
-	ul
+	&.has-dropdown
+		margin-bottom: 60px
+		.dropdown
+			&.is-open
+				display: block
+	> ul
 		+justify
-	li
-		position: relative
-		+justify-child
-		text-align: center
-		font-family: $font-alt
-		font-size: 16px
-		font-weight: bold
-		text-transform: uppercase
-		color: #0f0e0e
-		margin-bottom: -3px
-		&:hover, &.is-active
-			&:before
-				position: absolute
-				bottom: 0
-				right: -3px
-				left: -3px
-				height: 3px
-				background: #fff
-				content: ""
+		li
+			position: relative
+			+justify-child
+			text-align: center
+			font-family: $font-alt
+			font-size: 16px
+			font-weight: bold
+			text-transform: uppercase
+			color: #0f0e0e
+			margin-bottom: -3px
+			&:hover, &.is-active
+				&:before
+					position: absolute
+					bottom: 0
+					right: -3px
+					left: -3px
+					height: 3px
+					background: #fff
+					content: ""
+				a
+					color: #fa6000
+					text-decoration: none
+					border-bottom: 3px solid #fa6000
 			a
-				color: #fa6000
+				position: relative
+				z-index: 1
+				display: block
+				color: #0f0e0e
 				text-decoration: none
-				border-bottom: 3px solid #fa6000
-	a
-		position: relative
-		z-index: 1
-		display: block
-		color: #0f0e0e
-		text-decoration: none
-		padding: 0 8px 12px
-		line-height: 16px
-		border-bottom: 3px solid transparent
+				padding: 0 8px 12px
+				line-height: 16px
+				border-bottom: 3px solid transparent
+
+	.dropdown
+		display: none
+		position: absolute
+		top: 100%
+		width: 990px
+		text-align: left
+		background: #f3f3f1
+		margin-top: 4px
+		height: 33px
+		ul
+			padding: 0 8px
+			li
+				font-size: 14px
+				margin-left: 35px
+				&:first-child
+					margin-left: 0
+				&:hover, &.is-active
+					&:before
+						content: none
+					a
+						color: #fa6000
+				a
+					border: none
+					line-height: 14px
+					padding: 11px 0 8px
+					color: #0f0e0e
 
 // FOOTER
 // --------------------------------------------------
