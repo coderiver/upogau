@@ -211,7 +211,7 @@ body { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-s
 .blog .blog_topichref { text-decoration: none; }
 .blog .blog_topichref .blog__topictitle { font-size: 16px; color: #1a1a1a; }
 .blog .blog_topichref .blog__topicdesc { font-size: 14px; color: #919087; }
-.blog .blog__topictitle { font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; font-size: 16px; color: #1a1a1a; margin-bottom: 10px; }
+.blog .blog__topictitle { font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; font-weight: bold; font-size: 16px; color: #1a1a1a; margin-bottom: 10px; }
 .blog .blog__topicdesc { font-size: 14px; color: #919087; }
 .blog .blog__topicmeta { margin-top: 15px; font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; }
 .blog .blog__topicmeta li { position: relative; display: inline-block; vertical-align: middle; color: #6f6f70; padding: 0 0 0 10px; margin-left: 7px; }
