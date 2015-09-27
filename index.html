@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
-	<meta name="viewport" content="width=1020">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" media="screen" href="css/screen.css">
 	<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -15,11 +15,11 @@
 	<!-- begin header -->
 	<div class="header">
 		<div class="header__in">
-		<!-- 	<div class="header__logo">
+		 	<div class="header__logo">
 				<a href="#">
 					<img src="http://placehold.it/120x90" alt="logo">
 				</a>
-			</div> -->
+			</div>
 			<div class="header__main">
 				<div class="header__toolbar">
 					<div class="social">
@@ -54,7 +54,8 @@
 	<!-- end header -->
 
 	<!-- begin nav -->
-	<div class="nav">
+	<div class="nav nav-mobile">
+
 		<ul>
 			<li class="is-active">
 				<a href="#"><b>Новости</b></a>
@@ -75,6 +76,8 @@
 			<li><a href="#"><b>Блоги</b></a></li>
 			<li><a href="#"><b>Контакты</b></a></li>
 		</ul>
+		<!--begin mobile -->
+		<a href="#" class="menu-mob"></a>
 	</div>
 	<!-- end nav -->
 
@@ -225,8 +228,8 @@
 			</div>
 			<!-- end topsection -->
 			<div class="l">
-				<div class="l-main">
-					<div class="section">
+				<div class="l-main main-mobile">
+					<div class="section ">
 						<div class="row">
 							<div class="column">
 								<!-- begin article -->
@@ -629,127 +632,131 @@
 						</div>
 					</div>
 				</div>
-				<div class="l-sidebar">
+				<div class="sidebar-mobile l-sidebar ">
 					<div class="h-bordered"><a href="#">Лента</a> <span class="badge">Live</span></div>
 					<!-- begin tabloid -->
 					<div class="tabloid">
-						<div class="tabloid__item">
-							<div class="tabloid__info">
-								<div class="tabloid__date">19:38</div>
-								<div class="tabloid__desc">
-									<a href="#">
-										Валентина Гафта переводят из реанимации в хирургическое отделение
-									</a>
+						<div class="tabloit__item-left">
+							<div class="tabloid__item">
+								<div class="tabloid__info">
+									<div class="tabloid__date">19:38</div>
+									<div class="tabloid__desc">
+										<a href="#">
+											Валентина Гафта переводят из реанимации в хирургическое отделение
+										</a>
+									</div>
+									<div class="tabloid__source">
+										<a href="#">
+											Onliner.by
+										</a>
+									</div>
 								</div>
-								<div class="tabloid__source">
-									<a href="#">
-										Onliner.by
-									</a>
+							</div>
+							<div class="tabloid__item">
+								<div class="tabloid__info">
+									<div class="tabloid__date">19:10</div>
+									<div class="tabloid__desc">
+										<a href="#">
+											В Красноярске готовится к открытию фестиваль «Театральная весна-2014» Было замечательно
+										</a>
+									</div>
+									<div class="tabloid__source">
+										<a href="#">
+											News.tut.by
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="tabloid__item">
+								<div class="tabloid__info">
+									<div class="tabloid__date">18:29</div>
+									<div class="tabloid__desc">
+										<a href="#">
+											Артист и режиссер Андрей Денников скончался в Москве
+										</a>
+									</div>
+									<div class="tabloid__source">
+										<a href="#">
+											Ria.ru
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="tabloid__item">
+								<div class="tabloid__info">
+									<div class="tabloid__date">17:20</div>
+									<div class="tabloid__desc">
+										<a href="#">
+											Актер Крис Пайн признался в управлении авто под воздействием алкоголя
+										</a>
+									</div>
+									<div class="tabloid__source">
+										<a href="#">
+											Liga.net
+										</a>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="tabloid__item">
-							<div class="tabloid__info">
-								<div class="tabloid__date">19:10</div>
-								<div class="tabloid__desc">
-									<a href="#">
-										В Красноярске готовится к открытию фестиваль «Театральная весна-2014» Было замечательно
-									</a>
-								</div>
-								<div class="tabloid__source">
-									<a href="#">
-										News.tut.by
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="tabloid__item">
-							<div class="tabloid__info">
-								<div class="tabloid__date">18:29</div>
-								<div class="tabloid__desc">
-									<a href="#">
-										Артист и режиссер Андрей Денников скончался в Москве
-									</a>
-								</div>
-								<div class="tabloid__source">
-									<a href="#">
-										Ria.ru
-									</a>
+						<div class="tabloit__item-right">
+							<div class="tabloid__item">
+								<div class="tabloid__info">
+									<div class="tabloid__date">15:55</div>
+									<div class="tabloid__desc">
+										<a href="#">
+											Выставка "живых" картин о Крыме открывается в Москве
+										</a>
+									</div>
+									<div class="tabloid__source">
+										<a href="#">
+											Onliner.by
+										</a>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="tabloid__item">
-							<div class="tabloid__info">
-								<div class="tabloid__date">17:20</div>
-								<div class="tabloid__desc">
-									<a href="#">
-										Актер Крис Пайн признался в управлении авто под воздействием алкоголя
-									</a>
-								</div>
-								<div class="tabloid__source">
-									<a href="#">
-										Liga.net
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="tabloid__item">
-							<div class="tabloid__info">
-								<div class="tabloid__date">15:55</div>
-								<div class="tabloid__desc">
-									<a href="#">
-										Выставка "живых" картин о Крыме открывается в Москве
-									</a>
-								</div>
-								<div class="tabloid__source">
-									<a href="#">
-										Onliner.by
-									</a>
+							<div class="tabloid__item">
+								<div class="tabloid__info">
+									<div class="tabloid__date">14:18</div>
+									<div class="tabloid__desc">
+										<a href="#">
+											Валентина Гафта переводят из реанимации в хирургическое отделение
+										</a>
+									</div>
+									<div class="tabloid__source">
+										<a href="#">
+											News.ru
+										</a>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="tabloid__item">
-							<div class="tabloid__info">
-								<div class="tabloid__date">14:18</div>
-								<div class="tabloid__desc">
-									<a href="#">
-										Валентина Гафта переводят из реанимации в хирургическое отделение
-									</a>
-								</div>
-								<div class="tabloid__source">
-									<a href="#">
-										News.ru
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="tabloid__item">
-							<div class="tabloid__info">
-								<div class="tabloid__date">14:10</div>
-								<div class="tabloid__desc">
-									<a href="#">
-										В санкционный список Евросоюза попали депутаты Железняк и Миронов
-									</a>
-								</div>
-								<div class="tabloid__source">
-									<a href="#">
-										News.tut.by
-									</a>
+							<div class="tabloid__item">
+								<div class="tabloid__info">
+									<div class="tabloid__date">14:10</div>
+									<div class="tabloid__desc">
+										<a href="#">
+											В санкционный список Евросоюза попали депутаты Железняк и Миронов
+										</a>
+									</div>
+									<div class="tabloid__source">
+										<a href="#">
+											News.tut.by
+										</a>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="tabloid__item">
-							<div class="tabloid__info">
-								<div class="tabloid__date">10:11</div>
-								<div class="tabloid__desc">
-									<a href="#">
-										Артист и режиссер Андрей Денников скончался в Москве
-									</a>
-								</div>
-								<div class="tabloid__source">
-									<a href="#">
-										Ria.ru
-									</a>
+							<div class="tabloid__item">
+								<div class="tabloid__info">
+									<div class="tabloid__date">10:11</div>
+									<div class="tabloid__desc">
+										<a href="#">
+											Артист и режиссер Андрей Денников скончался в Москве
+										</a>
+									</div>
+									<div class="tabloid__source">
+										<a href="#">
+											Ria.ru
+										</a>
+									</div>
 								</div>
 							</div>
 						</div>
