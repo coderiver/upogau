@@ -21,6 +21,7 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 @font-face { font-family: "PT Sans Bold"; src: url("../fonts/pt_sans-bold.eot"); src: url("../fonts/pt_sans-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/pt_sans-bold.woff") format("woff"), url("../fonts/pt_sans-bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 h1, .h1 { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-size: 24px; line-height: 1.2; margin-bottom: 10px; font-weight: bold; color: #000; }
+@media only screen and (max-width: 768px) { h1, .h1 { font-size: 18px; } }
 h1 a, .h1 a { color: inherit; text-decoration: none; }
 
 h2, .h2 { font-family: "PT Sans Bold", Arial, "Helvetica Neue", Helvetica, sans-serif; font-size: 20px; line-height: 1.2; margin-bottom: 10px; font-weight: normal; color: #000; }
@@ -40,6 +41,7 @@ h3 a, .h3 a { color: inherit; text-decoration: none; }
 .h-line > span:before { position: absolute; top: 50%; margin-top: -1px; left: 100%; height: 3px; background: #000; content: ""; width: 1000em; }
 
 .h-centered { font-family: "PT Sans Bold", Arial, "Helvetica Neue", Helvetica, sans-serif; font-size: 24px; color: #0e0e0e; line-height: 1; text-transform: uppercase; margin: 0 auto; text-align: center; letter-spacing: 0.03em; margin-bottom: 35px; }
+@media only screen and (max-width: 500px) { .h-centered { font-size: 18px; } }
 .h-centered a { color: inherit; text-decoration: none; }
 .h-centered span { display: inline-block; position: relative; padding: 0 52px; }
 .h-centered span:before, .h-centered span:after { position: absolute; top: 50%; margin-top: -2px; width: 32px; height: 3px; background: #000; content: ""; }
@@ -404,7 +406,7 @@ body { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-s
 @media only screen and (max-width: 900px) { .article .article__txt p { font-size: 11px; } }
 .article .article__title { font-family: "PT Sans Bold", Arial, "Helvetica Neue", Helvetica, sans-serif; padding-top: 15px; font-size: 15px; line-height: 1.2; color: #0f0e0e; }
 @media only screen and (max-width: 1024px) { .article .article__title { font-size: 12px; } }
-@media only screen and (max-width: 900px) { .article .article__title { font-size: 11px; width: 315px; } }
+@media only screen and (max-width: 900px) { .article .article__title { font-size: 11px; width: auto; } }
 .article .article__title a { color: inherit; text-decoration: none; }
 
 @media only screen and (max-width: 1024px) { .main-mobile { width: 98%; margin: 0 2%; } }
@@ -442,6 +444,7 @@ body { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-s
 .category .category__list .article_horz:before { position: absolute; top: 0; left: 0; right: 135px; height: 1px; background: #ccc; content: ""; }
 
 .paginator { position: relative; font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; font-size: 16px; margin-bottom: 45px; }
+@media only screen and (max-width: 600px) { .paginator { font-size: 10px; } }
 .paginator a { color: #372f2b; text-decoration: none; }
 .paginator .paginator__prev, .paginator .paginator__next { position: absolute; top: -2px; text-transform: uppercase; }
 .paginator .paginator__prev a, .paginator .paginator__next a { display: block; color: #c0c0c0; }
@@ -455,6 +458,7 @@ body { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-s
 .paginator .paginator__next i { margin-left: 10px; background: url('../img/icons-s16a273336d.png') 0 -836px no-repeat; width: 27px; height: 28px; }
 .paginator .paginator__list { text-align: center; }
 .paginator .paginator__list .is-current, .paginator .paginator__list a { padding: 0 10px; }
+@media only screen and (max-width: 470px) { .paginator .paginator__list .is-current, .paginator .paginator__list a { padding: 0 5px; } }
 .paginator .paginator__list .is-current { color: #c0c0c0; }
 
 .topic { margin-bottom: 30px; }
@@ -486,9 +490,14 @@ body { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-s
 .materials .article { width: 100%; }
 .materials .article .article__info { width: 100%; height: 175px; }
 .materials .materials__cols { *zoom: 1; }
+@media only screen and (max-width: 1024px) { .materials .materials__cols { width: 650px; margin: 0 auto; } }
+@media only screen and (max-width: 768px) { .materials .materials__cols { width: 457px; } }
+@media only screen and (max-width: 500px) { .materials .materials__cols { width: 255px; } }
 .materials .materials__cols:after { content: " "; display: table; clear: both; }
 .materials .materials__column { float: left; margin-left: 17px; width: 205px; }
+@media only screen and (max-width: 768px) { .materials .materials__column { margin-top: 20px; } }
 .materials .materials__column:first-child { margin-left: 0; }
+@media only screen and (max-width: 768px) { .materials .materials__column:first-child { margin-left: 17px; } }
 .materials .materials__inner .materials__cols { position: relative; padding: 16px 0 15px; }
 .materials .materials__inner .materials__cols:before { position: absolute; top: 0; left: 0; right: 135px; height: 1px; background: #ccc; content: ""; }
 .materials .materials__inner .materials__cols:first-child { padding-top: 0; }
@@ -530,10 +539,14 @@ body { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-s
 .slideshow .slideshow__prev { left: 0; background: url('../img/icons-s16a273336d.png') 0 -38px no-repeat; width: 15px; height: 28px; }
 .slideshow .slideshow__next { right: 0; background: url('../img/icons-s16a273336d.png') 0 0 no-repeat; width: 15px; height: 28px; }
 .slideshow .slideshow__main { margin-bottom: 10px; }
-.slideshow .slideshow__main > div { width: 650px; height: 435px; overflow: hidden; }
-.slideshow .slideshow__main > div img { display: block; min-width: 100%; max-height: 100%; }
+.slideshow .slideshow__main > div { margin: 0 auto; max-width: 650px; height: 435px; overflow: hidden; }
+.slideshow .slideshow__main > div img { display: block; width: 100%; height: 100%; }
 .slideshow .slideshow__slidepreview { position: relative; }
-.slideshow .slideshow__slidepreview .slideshow__preview-overlay { position: relative; }
+@media only screen and (max-width: 1024px) { .slideshow .slideshow__slidepreview { width: 660px; margin: 0 auto; } }
+@media only screen and (max-width: 768px) { .slideshow .slideshow__slidepreview { width: 401px; } }
+@media only screen and (max-width: 600px) { .slideshow .slideshow__slidepreview { margin-top: -60px; } }
+@media only screen and (max-width: 600px) { .slideshow .slideshow__slidepreview { margin-top: -70px; } }
+.slideshow .slideshow__slidepreview .slideshow__preview-overlay { position: relative; margin: 0 auto; }
 .slideshow .slideshow__slidepreview .slideshow__preview-overlay:before { position: absolute; top: 3px; left: 6px; right: 0; bottom: 3px; content: ""; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70); opacity: 0.7; background-color: #000; }
 .slideshow .slideshow__slidepreview .cycle-slideshow { margin: 0 20px; }
 .slideshow .slideshow__slidepreview .cycle-slide { width: 111px !important; height: 116px; margin-right: 12px; margin-bottom: 2px; cursor: pointer; }
@@ -547,13 +560,23 @@ body { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-s
 .overlay.is-open .popup { display: block; }
 
 .popup { position: relative; width: 780px; margin: 30px auto; background: #fff; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; display: none; }
+@media only screen and (max-width: 900px) { .popup { width: 680px; } }
+@media only screen and (max-width: 768px) { .popup { width: 400px; } }
+@media only screen and (max-width: 500px) { .popup { width: 320px; } }
 .popup .popup__close { position: absolute; top: 46px; right: 52px; background: url('../img/icons-s16a273336d.png') 0 -328px no-repeat; width: 11px; height: 11px; cursor: pointer; }
+@media only screen and (max-width: 768px) { .popup .popup__close { right: 20px; } }
+@media only screen and (max-width: 500px) { .popup .popup__close { right: 8px; top: 10px; } }
 .popup .popup__in { padding: 42px 50px; }
+@media only screen and (max-width: 900px) { .popup .popup__in { padding: 42px 30px; } }
+@media only screen and (max-width: 768px) { .popup .popup__in { padding: 42px 15px; } }
 .popup .popup__columns { *zoom: 1; font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-size: 16px; font-weight: bold; color: #000; line-height: 1.1; position: relative; }
 .popup .popup__columns:after { content: " "; display: table; clear: both; }
 .popup .popup__columns:before { position: absolute; top: 0; bottom: 0; right: 305px; width: 1px; background: #cfcfcf; content: ""; }
+@media only screen and (max-width: 768px) { .popup .popup__columns:before { display: none; } }
 .popup .popup__leftcol { float: left; width: 300px; }
+@media only screen and (max-width: 768px) { .popup .popup__leftcol { width: 100%; } }
 .popup .popup__rightcol { float: right; width: 255px; }
+@media only screen and (max-width: 768px) { .popup .popup__rightcol { float: left; margin-top: 30px; width: 100%; } }
 .popup .popup__sub { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-size: 16px; font-weight: bold; color: #000; line-height: 1.1; }
 .popup .form__row { padding: 0; border: none; margin-bottom: 20px; }
 .popup .form__label { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-size: 16px; font-weight: bold; color: #000; line-height: 1.1; }
@@ -602,3 +625,5 @@ body { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-s
 .tabs .tabs__pane.is-open { display: block; }
 
 .scrollup { position: absolute; bottom: 50px; right: 130px; background: url('../img/icons-s16a273336d.png') 0 -1441px no-repeat; width: 41px; height: 51px; }
+@media only screen and (max-width: 1024px) { .scrollup { right: 50px; } }
+@media only screen and (max-width: 500px) { .scrollup { right: 20px; } }
