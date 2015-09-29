@@ -35,7 +35,7 @@
 						<button class="search__submit" type="submit"></button>
 					</div>
 					<div class="userlinks">
-						<ul>
+						<ul class="userlinks__s">
 							<li><a href="#" class="userlinks__signin g-pseudo"><b>Вход</b></a></li>
 							<li><a href="#" class="userlinks__signup g-pseudo">Регистрация</a></li>
 						</ul>
@@ -77,7 +77,33 @@
 			<li><a href="#"><b>Контакты</b></a></li>
 		</ul>
 		<!--begin mobile -->
-		<a href="#" class="menu-mob"></a>
+		<div class="menu-mob js-menu-btn">
+			<a href="#"></a>
+		</div>
+		<div class="nav-mobile js-menu">
+					<ul>
+						<li class="is-active"><a href="#"><b>Новости</b></a>
+							<div class="dropdown-mobile">
+								<ul>
+									<li><a href="#">Все новости</a></li>
+									<li><a href="#">В Мире</a></li>
+									<li><a href="#">В Украине</a></li>
+									<li><a href="#">Киевские</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="#"><b>О нас</b></a></li>
+						<li><a href="#"><b>Форум</b></a></li>
+						<li><a href="#"><b>Фото и видео</b></a></li>
+						<li><a href="#"><b>Библиотека</b></a></li>
+						<li><a href="#"><b>Блоги</b></a></li>
+						<li><a href="#"><b>Контакты</b></a></li>
+					</ul>
+					<ul class="userlinks__s userlinks__m">
+							<li><a href="#" class="userlinks__signin g-pseudo"><b>Вход</b></a></li>
+							<li><a href="#" class="userlinks__signup g-pseudo">Регистрация</a></li>
+					</ul>
+			</div>
 	</div>
 	<!-- end nav -->
 
@@ -114,7 +140,8 @@
 								<!-- end article -->
 							</div>
 							<div class="mainslider__slide">
-								<!-- begin article -->
+								<!--
+								begin article -->
 								<div class="article article_extra">
 									<div class="article__info">
 										<div class="article__picture">

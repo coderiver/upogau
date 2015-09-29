@@ -144,4 +144,8 @@ $(document).ready(function() {
 		slideshows.cycle('goto', index);
 	});
 
+	$('.js-menu-btn').on('click', function() {
+		$('.js-menu').toggleClass('is-actives');
+		return false;
+	});
 });
