@@ -253,7 +253,7 @@ body { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-s
 @media only screen and (max-width: 768px) { .tabloid .tabloit__item-right { width: 100%; } }
 @media only screen and (max-width: 1024px) { .tabloid .tabloit__item-left { width: 45%; display: inline-block; margin-right: 5%; } }
 @media only screen and (max-width: 900px) { .tabloid .tabloit__item-left { width: 43%; } }
-@media only screen and (max-width: 768px) { .tabloid .tabloit__item-left { width: 100%; } }
+@media only screen and (max-width: 768px) { .tabloid .tabloit__item-left { width: 100%; margin-right: 0; } }
 
 .blog { background: #f3f2ef; margin-bottom: 45px; }
 .blog .blog__head { padding: 20px; }
