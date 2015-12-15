@@ -7,6 +7,7 @@ body
 	min-width: 1020px
 	+font-smoothing
 
+
 // GRID
 // --------------------------------------------------
 // container extend
@@ -219,6 +220,8 @@ body
 		+s(od)
 	.social__tw
 		+s(tw)
+	.social__youtube
+		+s(youtube)
 
 // Search form
 // --------------------------------------------------
@@ -226,11 +229,11 @@ body
 	display: inline-block
 	vertical-align: top
 	position: relative
-	margin-left: 29px
+	margin-left: 20px
 	padding-top: 5px
 	.search__query
 		font-family: $font-alt
-		width: 174px
+		width: 302px
 		height: 30px
 		background: #fff
 		+box
@@ -271,8 +274,8 @@ body
 			text-decoration: underline
 .lang
 	position: relative
-	padding-left: 22px
-	margin-left: 23px
+	padding-left: 20px
+	margin-left: 25px
 	&:before
 		position: absolute
 		top: 50%
@@ -292,7 +295,7 @@ body
 .nav
 	@extend %in
 	border-bottom: 3px solid #d0d0ce
-	margin-bottom: 22px
+	margin-bottom: 20px
 	&.has-dropdown
 		margin-bottom: 60px
 		.dropdown
@@ -369,6 +372,32 @@ body
 					color: #0f0e0e
 					&:before
 						content: none
+//MAIN-TOPIC
+// --------------------------------------------------
+.main-topic 
+	@extend %in
+	margin-bottom: 17px
+	+clr
+	li
+		font-family: $font-alt-bold
+		&:first-child
+			float: left
+		&:last-child
+			float: right 
+		a
+			color: #000
+			text-transform: uppercase 
+			text-decoration: none 
+			border-bottom: 1px dotted #000
+			&:hover
+				border-bottom: none
+			span
+				color: #f51c1c
+			 
+
+
+
+
 
 // FOOTER
 // --------------------------------------------------
@@ -442,46 +471,55 @@ body
 // TABLOID
 // --------------------------------------------------
 .tabloid
-	position: relative
-	padding-bottom: 19px
-	margin-bottom: 50px
-	&:before
-		width: 190px
-		height: 3px
-		background: #000
-		content: ""
-		position: absolute
-		bottom: 0
-		left: 0
-	.tabloid__item
-		font-size: 14px
-		font-family: $font-alt
-		line-height: 1.2
-		border-top: 1px solid #000
-		padding: 16px 0
-		&:first-child
-			border-top: none
-			padding-top: 0
-	.tabloid__date
-		position: absolute
-		top: 0
-		left: 0
-		color: #fa6000
-	.tabloid__info
-		position: relative
-		padding-left: 63px
-		padding-right: 15px
-	.tabloid__desc
-		color: #373636
-		a
-			color: inherit
+	margin-bottom: 20px
+	font-family: $font-alt 
+	&:first-child 
+		margin-top: 65px	
+
+	.tabloid-item
+		&__title
+			li
+				position: relative
+				display: inline-block
+				font-size: 14px
+				line-height: 19px
+				font-weight: 400 
+				&:first-child
+					color: #fa6000
+				&:nth-child(2)
+					color: #0f0e0e
+					margin-right: 24px
+				&:nth-child(3)
+					color: #6f6f70
+					margin-right: 24px
+					&:before
+						position: absolute
+						top: 1px
+						left: -12px
+						height: 15px
+						width: 1px
+						background: #6f6f70
+						content: ""
+				&:last-child
+					&:before
+						position: absolute
+						top: 1px
+						left: -12px
+						height: 15px
+						width: 1px
+						background: #6f6f70
+						content: ""
+				i
+					margin: 0 5px 3px 0 
+		&__body
+			color: #0f0e0e
+			font-size: 15px
+			font-weight: 700
+			line-height: 18px
 			text-decoration: none
-	.tabloid__source
-		color: #a7a7a8
-		margin-top: 5px
-		a
-			color: inherit
-			text-decoration: none
+			span
+				color: #fa2f00
+	
 
 // BLOG
 // --------------------------------------------------
@@ -821,9 +859,10 @@ body
 			.article__meta li
 				color: #dadbdd
 
+
 .article
 	font-family: $font-alt
-	padding: 10px 0 15px
+	padding: 10px 0 25px
 	&.article_lg
 		.article__info
 			height: 350px
