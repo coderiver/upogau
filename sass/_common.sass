@@ -1,31 +1,44 @@
+
+
 body
 	font-family: $font-base
 	font-size: 14px
 	line-height: 1.4
 	color: #373636
 	background: #fff
-	min-width: 1020px
 	+font-smoothing
-
 
 // GRID
 // --------------------------------------------------
 // container extend
 %in
-	width: 990px
+	width: 100%
+	max-width: 990px
 	margin: 0 auto
 .container
 	@extend %in
+	+r(1024)
+		width: 100%
 .row
 	+clr
 	margin-left: -20px
+	+r(1024)
+		margin-left: 0
+
 .column
 	float: left
 	width: 315px
 	margin-left: 20px
-.column-lg
+	+r(1024)
+		width: 40%
+		margin: 0 5%
+	+r(768)
+		float: none
+		width: auto
+		margin: 0 auto
+	.column-lg
 	float: left
-	width: 480px
+	//width: 480px
 	margin-left: 20px
 .column-sm
 	float: left
@@ -176,6 +189,7 @@ body
 
 // HEADER
 // --------------------------------------------------
+
 .header
 	font-family: $font-alt
 	margin-bottom: 33px
@@ -183,6 +197,9 @@ body
 		@extend %in
 		padding-top: 34px
 		+clr
+		+r(1024)
+			width: 96%
+			margin: 0 2%
 	.header__logo
 		float: left
 		width: 120px
@@ -194,14 +211,32 @@ body
 	.header__main
 		width: 655px
 		float: right
+		+r(900)
+			float: none
+			width: 100%
+
 	.header__toolbar
 		margin-bottom: 30px
 		+clr
+		+r(900)
+			float: right
+			margin-top: 20px
+			margin-bottom: 60px
+		+r(660)
+			margin-top: 0
+			margin-bottom: 20px
+			width: 160px
+
 
 // Social buttons
 // --------------------------------------------------
 .social
 	display: inline-block
+	+clr
+	+r(660)
+		display: block
+		float: right
+		+clr
 	.social__href
 		+hidetext
 		display: block
@@ -223,6 +258,7 @@ body
 	.social__youtube
 		+s(youtube)
 
+
 // Search form
 // --------------------------------------------------
 .search
@@ -231,6 +267,10 @@ body
 	position: relative
 	margin-left: 20px
 	padding-top: 5px
+	+r(660)
+		display: block
+		padding-top: 45px
+		margin-left: 0
 	.search__query
 		font-family: $font-alt
 		width: 302px
@@ -245,6 +285,8 @@ body
 		+box-shadow(0px -1px 1px -1px rgba(#000, .7))
 		&:focus
 			+placeholder-color(transparent)
+		+r(768)
+			width: 160px
 	.search__submit
 		position: absolute
 		top: 50%
@@ -252,6 +294,8 @@ body
 		right: 13px
 		+s(search)
 		+hidetext
+		+r(660)
+			top: 78%
 
 // User links & languages
 // --------------------------------------------------
@@ -262,9 +306,14 @@ body
 	padding-top: 11px
 	ul
 		display: inline-block
+		+r(900)
+			margin-left: 10px
+
+
 	li
 		display: inline-block
 		margin-left: 21px
+
 		&:first-child
 			margin-left: 0
 	a
@@ -272,10 +321,27 @@ body
 		text-decoration: none
 		&:hover
 			text-decoration: underline
+.userlinks__s
+	li
+		+r(768)
+			display: none
+.userlinks__m
+	li
+		width: 110px
+		+r(768)
+			display: inline-block
+	&:hover
+		cursor: pointer
+
+
+
+
 .lang
 	position: relative
-	padding-left: 20px
-	margin-left: 25px
+	padding-left: 22px
+	margin-left: 23px
+	+r(900)
+		margin-left: 10px
 	&:before
 		position: absolute
 		top: 50%
@@ -285,25 +351,67 @@ body
 		height: 18px
 		background: #7f7f7f
 		content: ""
+		+r(768)
+			display: none
+
 	li
 		margin-left: 7px
 		&:first-child
 			margin-left: 0
+			
+
+//MAIN-TOPIC
+// --------------------------------------------------
+.main-topic 
+	@extend %in
+	margin-bottom: 17px
+	+clr
+	li
+		font-family: $font-alt-bold
+		&:first-child
+			float: left
+		&:last-child
+			float: right 
+		a
+			color: #000
+			text-transform: uppercase 
+			text-decoration: none 
+			border-bottom: 1px dotted #000
+			&:hover
+				border-bottom: none
+			span
+				color: #f51c1c
+		
 
 // MAIN NAVIGATION
 // --------------------------------------------------
 .nav
+
 	@extend %in
 	border-bottom: 3px solid #d0d0ce
-	margin-bottom: 20px
+	margin-bottom: 22px
+	position: relative
+	+r(1024)
+		width: 96%
+		margin: 0 2%
+	+r(768)
+		border-bottom: none
+
+
+
 	&.has-dropdown
 		margin-bottom: 60px
+		+r(768)
+			margin-bottom: 0
 		.dropdown
 			&.is-open
 				display: block
 	> ul
 		position: relative
 		+justify
+		+r(768)
+			display: none
+
 		li
 			// position: relative
 			+justify-child
@@ -314,6 +422,7 @@ body
 			text-transform: uppercase
 			color: #0f0e0e
 			margin-bottom: -3px
+
 			&:hover, &.is-active
 				a
 					position: relative
@@ -327,6 +436,7 @@ body
 						height: 3px
 						background: #fff
 						content: ""
+
 					b
 						border-bottom: 3px solid #fa6000
 			a
@@ -341,6 +451,8 @@ body
 					padding: 0 8px 12px
 					line-height: 16px
 					border-bottom: 3px solid transparent
+					+r(768)
+						display: none
 
 	.dropdown
 		display: none
@@ -372,28 +484,52 @@ body
 					color: #0f0e0e
 					&:before
 						content: none
-//MAIN-TOPIC
-// --------------------------------------------------
-.main-topic 
-	@extend %in
-	margin-bottom: 17px
-	+clr
-	li
-		font-family: $font-alt-bold
-		&:first-child
-			float: left
-		&:last-child
-			float: right 
+	.menu-mob
+		display: none
+		position: relative
+		margin-bottom: 20px
+		+s(menu_mobile)
+		width: 100%
+		background-color: #d0d0ce
+		cursor: pointer
+		+r(768)
+			margin-bottom: 0
+			display: block
+
+	.nav-mobile
+		display: none
+		width: auto
+		background-color: #d0d0ce
+		border: 1px solid rgba(0, 0, 0, 0.15)
+		height: 324px
+		z-index: 9999
+		text-align: center
+	.is-actives
+		display: block
+
+		li
+			text-align: center
+			font-family: $font-alt
+			font-size: 16px
+			font-weight: bold
+			text-transform: uppercase
+			color: #0f0e0e
+			&.is-active, &:hover
+				background-color: #fa6000
 		a
-			color: #000
-			text-transform: uppercase 
-			text-decoration: none 
-			border-bottom: 1px dotted #000
-			&:hover
-				border-bottom: none
-			span
-				color: #f51c1c
-			 
+			line-height: 36px
+			text-decoration: none
+			color: #0f0e0e
+
+		.dropdown-mobile
+			ul
+				background-color: #959595
+			li
+				display: inline-block
+				width: 65px
+				margin-right: -5px
+			a
+				font-size: 10px
 
 
 
@@ -414,6 +550,9 @@ body
 		@extend %in
 		padding-top: 35px
 		padding-bottom: 13px
+		+r(1024)
+			width: 96%
+			margin: 0 2%
 	.footer__top
 		padding-bottom: 13px
 		border-bottom: 1px solid #e3e3e3
@@ -421,11 +560,22 @@ body
 	.footer__menu
 		float: left
 		margin-right: 5px
+		+r(768)
+			min-height: 120px
+		+r(360)
+			min-height: 95px
+
 		ul
-			display: inline-block
+			float: left
 			vertical-align: top
 			width: 200px
 			margin-left: 24px
+			+r(1024)
+				width: 170px
+			+r(768)
+				margin-left: 5px
+			+r(384)
+				margin-left: 0
 			&:first-child
 				margin-left: 0
 		a
@@ -441,17 +591,25 @@ body
 		line-height: 1
 		margin-bottom: 11px
 	.footer__socials
-		float: left
+		float: right
 		margin-left: 33px
+		+r(900)
+			margin-left: 0
+		+r(768)
+			float: left
+
+
 		.social
 			margin-left: -3px
 	.footer__copy
 		position: relative
 		text-align: center
 		min-height: 55px
-		width: 595px
+		//width: 595px
 		padding: 12px 70px 0
 		margin: 10px auto 0
+		+r(768)
+			width: auto
 		p
 			letter-spacing: 0.017em
 			line-height: 1.5
@@ -519,8 +677,11 @@ body
 			text-decoration: none
 			span
 				color: #fa2f00
-	
-
+	&__mod
+		&__title
+			li
+				display: block
+			
 // BLOG
 // --------------------------------------------------
 .blog
@@ -587,7 +748,7 @@ body
 		color: #919087
 	.blog__topicmeta
 		margin-top: 15px
-		font-family: $font-alt 
+		font-family: $font-alt
 		li
 			position: relative
 			display: inline-block
@@ -634,6 +795,9 @@ body
 	border: 1px solid rgba(0,0,0,.15)
 	height: 88px
 	overflow: hidden
+	+r(900)
+		width: 100%
+
 	// +box
 	img
 		display: block
@@ -644,6 +808,9 @@ body
 // --------------------------------------------------
 .vote
 	margin-bottom: 50px
+	+r(768)
+		display: none
+
 	.h-bordered
 		margin-bottom: 25px
 		// margin-right: 0
@@ -699,6 +866,16 @@ body
 .caro-articles
 	margin: 0 50px
 	position: relative
+	+r(1024)
+		width: 550px
+		margin: 0 auto
+	+r(768)
+		width: 360px
+		margin: 0 auto
+	+r(500)
+		width: 172px
+		margin: 0 auto
+
 	.caro-articles__in
 		position: relative
 	.caro-articles__wrap
@@ -733,11 +910,17 @@ body
 	@extend %gbox
 	.container
 		padding: 20px 0 10px
+		+r(1024)
+			width: 96%
+			margin-left: 2%
+			margin-right: 2%
 		// margin-bottom: 30px
 	.h2
 		color: #dadbdd
 	.report__head
 		margin-bottom: 25px
+		+r(1024)
+			text-align: center
 	.report__headicon
 		position: relative
 		top: -2px
@@ -747,14 +930,28 @@ body
 	.report__left
 		float: left
 		width: 480px
+		+r(1024)
+			float: none
+			margin: 0 auto
+		+r(500)
+			display: none
+			//float: none
+			//margin: 0 auto
+			//width: 315px
 	.report__right
 		float: right
 		width: 490px
+		+r(1024)
+			float: none
+			margin: 0 auto
+			max-width: 100%
 	.report__items
 		position: relative
 		+clr
 		padding: 30px 0
 		// height: 177px
+		+r(768)
+			padding: 10px 0
 		&:before
 			position: absolute
 			top: 0
@@ -764,6 +961,8 @@ body
 			background: #2a2b2b
 			content: ""
 			+box-shadow(0 1px 0 #565657)
+			+r(768)
+				display: none
 		&:first-child
 			padding-top: 0
 			&:before
@@ -772,44 +971,52 @@ body
 // NEWS
 // --------------------------------------------------
 .news
-	float: left
-	width: 235px
-	margin-left: 20px
-	&:first-child
-		margin-left: 0
+	margin: 0 auto
+	padding: 0 10px
+	+r(768)
+		margin: 0 auto
+		width: auto
 	&.news_lg
-		float: none
 		width: 480px
 		.news__media
 			height: 345px
 			-webkit-box-shadow: none
 			box-shadow: none
-		.news__desc
-			font-size: 16px
-			margin-right: 10px
+			+r(500)
+				height: 265px
+				margin: 0
+	.news__desc
+		padding: 0 5px
+		color: #0f0e0e
+		font-family: $font-alt
+		font-size: 18px
+		font-weight: 700
+		line-height: 23px
+		// margin-bottom: 20px
 	.news__href
 		display: block
+		text-decoration: none
+		// border-bottom: 1px solid rgba(0,0,0,0.2) 
+		
 	.news__media
 		position: relative
-		height: 108px
 		overflow: hidden
-		margin-bottom: 15px
+		margin-bottom: 20px
 		@include box-shadow(0 6px 8px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.2), inset 0 0 2px rgba(255,255,255,.4))
 		img
 			display: block
-			min-width: 100%
-			min-height: 100%
+			width: 100%
+			height: 100%
+		+r(768)
+			height: auto
 		.btn-play
 			position: absolute
 			top: 50%
 			left: 50%
 			margin-top: -25px
 			margin-left: -25px
-	.news__desc
-		font-family: $font-alt-bold
-		font-weight: normal
-		font-size: 15px
-		line-height: 1.2
+	
+		
 
 // TOPSECTION
 // --------------------------------------------------
@@ -820,14 +1027,177 @@ body
 	@include box-shadow(0 1px 3px rgba(0,0,0,.5))
 	//@include background-image(linear-gradient(bottom, #f8f8f8 0%, #fff 100%))
 	background-color: #37373e
+	+r(1024)
+		width: 96%
+		margin-left: 2%
+		margin-right: 2%
+		margin-top: 20px
+	+r(768)
+		background-color: #FFF
+
 	.topsection__left
 		float: left
 		width: 655px
+		+r(1024)
+			width: 65%
+		+r(768)
+			width: 100%
 	.topsection__right
 		overflow: hidden
+		+r(1024)
+			width: 35%
+		+r(768)
+			display: none
+			
+//MITING
+
+.sidebar-meeting
+	padding: 20px
+	background-color: #e1e1e0
+	margin-bottom: 30px
+	.meeting-title 
+		font-family: $font-alt
+		font-size: 20px
+		font-weight: 700
+		line-height: 19px
+	.meeting-select
+		font-family: $font-alt
+		color: #35353c
+		font-weight: 700
+		line-height: 24px
+		height: 40px
+		margin-top: 10px 
+		padding-bottom: 20px
+		
+		&__city
+			display: inline-block
+			vertical-align: top
+			margin: 7px 10px 0 5px
+			font-size: 16px
+		&__in
+			position: relative
+			display: inline-block
+			width: 151px
+			overflow: hidden
+			select
+				padding-right: 30px
+				width: 170px
+				height: 39px
+				background-color: white
+				border: 1px solid #e6e6e6
+				border-radius: 4px
+				padding: 8px 10px
+				color: #707072
+				font-family: $font-alt
+				font-size: 16px
+				font-weight: 400
+				line-height: 24px
+			.select__in-arrow
+				position: absolute
+				top: 18px
+				right: 10px
+				+s(select)
+
+	.meeting-item
+		font-family: $font-alt
+		a
+			text-decoration: none
+		&__border
+			border-top: 1px solid white
+			width: 360px 
+			margin-left: -20px
+		&__title
+			padding: 20px 10px 20px 5px
+			font-size: 14px
+			line-height: 18px
+			color: #222
+			&:last-child
+				padding: 20px 10px 0px 5px 
+			span
+				color: #fa6000
+				font-size: 14px
+				line-height: 23px
+				
+
+//	TAGS
+
+.tags-list
+	margin-top: 30px
+	font-family: $font-alt
+	li
+		display: inline-block
+		font-size: 0
+		margin-bottom: 4px
+	a
+		display: inline-block
+		padding: 5px 10px
+		background-color: #ececec
+		border-radius: 3px
+		text-decoration: none
+		font-size: 17px
+		color: #6f6f6f
+		
+
+// SECTION-BANK
+.section-bank 
+	width: 100%
+	height: 137px
+	border-top: 1px solid rgba(202,209,216,0.3)
+	border-bottom: 1px solid rgba(202,209,216,0.3)
+	&__item
+		line-height: 11
+		text-align: center
+		a
+			margin-right: 2%
+			&:last-child
+				margin-right: 0
+		.bank__item-yugra
+			background-image: url(../img/logo-bank-yugra.png) 
+			width: 175px
+			height: 31px
+			display: inline-block
+			
+			&:hover
+				background-image: url(../img/logo-bank-yugra_hover.png)
+		.bank__item-binbank
+			display: inline-block
+			width: 185px
+			height: 32px
+			
+			background-image: url(../img/logo-binbank.png)
+			&:hover
+				background-image: url(../img/logo-binbank_hover.png)
+		.bank__item-mtbank
+			display: inline-block
+			width: 185px
+			height: 45px
+			
+			background-image: url(../img/logo-mtbank_hover.png)
+			// &:hover
+			// 	background-image: url(../img/logo-binbank_hover.png)
+		.bank__item-imoneybank
+			display: inline-block
+			width: 207px
+			height: 32px
+			
+			background-image: url(../img/logo-imoneybank.png)
+			&:hover
+				background-image: url(../img/logo-imoneybank_hover.png)
+		.bank__item-germania
+			display: inline-block
+			width: 134px
+			height: 56px
+			background-image: url(../img/gazprom-germania_logo.png)
+			// &:hover
+			// 	background-image: url(../img/gazprom-germania_logo_hover.png)
+				
+
+
 
 // ARTICLE
 // --------------------------------------------------
+
+
 .articles
 	&.articles_topsection
 		margin-left: 18px
@@ -854,18 +1224,30 @@ body
 				height: 95px
 				overflow: hidden
 				padding-right: 20px
+				+r(900)
+					padding-right: 0
+					overflow: hidden
+					text-overflow: ellipsis
+
+
+
 			.article__title
 				color: #dadbdd
 			.article__meta li
 				color: #dadbdd
 
-
 .article
 	font-family: $font-alt
 	padding: 10px 0 25px
+	+r(1024)
+		width: 90%
+	+r(768)
+		width: 100%
 	&.article_lg
 		.article__info
 			height: 350px
+			+r(768)
+				height: auto
 	&.article_horz
 		+clr
 		.article__info
@@ -873,11 +1255,21 @@ body
 			width: 318px
 			height: 211px
 			margin-right: 22px
+			+r(1024)
+				width: 300px
+			+r(768)
+				float: none
+				width: auto
+				height: auto
+				margin-bottom: 20px
+				margin-right: 0
 		.article__picture
 			img
 				max-height: none
 		.article__txt
 			overflow: hidden
+
+
 		.article__meta
 			position: static
 			li
@@ -890,6 +1282,8 @@ body
 		.article__info
 			height: 375px
 			width: 100%
+			+r(1024)
+				width: 111%
 		.article__picture
 			&:before
 				height: 205px
@@ -897,6 +1291,9 @@ body
 			color: #fff
 			font-size: 20px
 			margin-bottom: 15px
+			+r(500)
+				font-size: 14px
+
 		.article__meta
 			bottom: 25px
 	&.article_sm
@@ -946,6 +1343,9 @@ body
 		height: 210px
 		overflow: hidden
 		@include box-shadow(0 1px 3px rgba(0,0,0,.4))
+		+r(768)
+			width: auto
+			height: auto
 	.article__picture
 		position: relative
 		&:before
@@ -985,6 +1385,9 @@ body
 			color: #dadbdd
 			padding: 0 11px
 			line-height: 1
+			+r(900)
+				font-size: 11px
+				padding: 0 5px
 			a
 				color: #dadbdd
 				text-decoration: none
@@ -992,6 +1395,8 @@ body
 					text-decoration: underline
 			&:first-child
 				padding: 0 11px 0 0
+				+r(900)
+					padding: 0 5px 0 0
 				&:before
 					content: none
 			&:before
@@ -1010,15 +1415,36 @@ body
 			color: #373636
 			line-height: 1.2
 			margin-top: 12px
+			+r(1024)
+				font-size: 12px
+			+r(900)
+				font-size: 11px
+
+
 	.article__title
 		font-family: $font-alt-bold
 		padding-top: 15px
 		font-size: 15px
 		line-height: 1.2
 		color: #0f0e0e
+		+r(1024)
+			font-size: 12px
+		+r(900)
+			font-size: 11px
+			width: auto
 		a
 			color: inherit
 			text-decoration: none
+
+.main-mobile
+	+r(1024)
+		width: 98%
+		margin: 0 2%
+
+.sidebar-mobile
+	+r(1024)
+		width: 200px
+		float: none
 
 
 // MAIN SLIDER
@@ -1036,6 +1462,8 @@ body
 		right: 0
 		text-align: center
 		z-index: 100
+		+r(768)
+			bottom: 10px
 		span
 			display: inline-block
 			vertical-align: middle
@@ -1077,6 +1505,9 @@ body
 		li
 			font-weight: bold
 			margin-bottom: 5px
+			+r(1024)
+				display: inline-block
+				margin-right: 10px
 			&.cabinet__message
 				color: #9e9e9e
 				font-weight: normal
@@ -1144,6 +1575,8 @@ body
 	font-family: $font-alt
 	font-size: 16px
 	margin-bottom: 45px
+	+r(600)
+		font-size: 10px
 	a
 		color: #372f2b
 		text-decoration: none
@@ -1155,6 +1588,9 @@ body
 		a
 			display: block
 			color: #c0c0c0
+
+
+
 		&.is-active
 			a
 				color: #372f2b
@@ -1163,6 +1599,10 @@ body
 			top: -2px
 			display: inline-block
 			vertical-align: middle
+			+r(400)
+				display: none
+
+
 	.paginator__prev
 		left: 0
 		&.is-active
@@ -1184,6 +1624,8 @@ body
 		.is-current,
 		a
 			padding: 0 10px
+			+r(470)
+				padding: 0 5px
 		.is-current
 			color: #c0c0c0
 
@@ -1197,6 +1639,8 @@ body
 	p
 		font-size: 16px
 		margin-bottom: 20px
+		+r(1024)
+			text-align: justify
 
 // MEDIA
 // --------------------------------------------------
@@ -1284,6 +1728,11 @@ body
 		position: absolute
 		top: 30px
 		right: 0
+		+r(768)
+			top: 55px
+			left: 0
+		+r(500)
+			display: none
 
 // Materials
 // --------------------------------------------------
@@ -1294,14 +1743,31 @@ body
 		.article__info
 			width: 100%
 			height: 175px
+			+r(768)
+				height: auto
 	.materials__cols
+		+r(1024)
+			width: 650px
+			margin: 0 auto
+		+r(768)
+			width: 457px
+		+r(500)
+			width: 255px
 		+clr
 	.materials__column
 		float: left
 		margin-left: 17px
 		width: 205px
+		+r(768)
+			margin-top: 20px
+			width: auto
+			float: none
 		&:first-child
 			margin-left: 0
+			+r(768)
+				float: none
+				margin-left: 17px
+
 	.materials__inner
 		.materials__cols
 			position: relative
@@ -1336,9 +1802,13 @@ body
 	.comment__userpic
 		float: left
 		width: 80px
+		+r(768)
+			float: none
 	.comment__message
 		overflow: hidden
 		margin-left: 100px
+		+r(768)
+			margin-left: 0
 	.comment__info
 		margin-bottom: 15px
 	.comment__username
@@ -1352,6 +1822,8 @@ body
 	.comment__txt
 		font-family: $font-base
 		margin-bottom: 15px
+		+r(768)
+		text-align: justify
 	.comment__reply
 		font-size: 14px
 		color: #0e0e0e
@@ -1367,6 +1839,8 @@ body
 		margin-bottom: 25px
 	.form
 		width: 565px
+		+r(768)
+			width: auto
 
 // Form
 // --------------------------------------------------
@@ -1382,6 +1856,9 @@ body
 	.form__col
 		float: left
 		margin-left: 40px
+		+r(768)
+			margin-left: 0
+			float: none
 		&:first-child
 			margin-left: 0
 	.form__label
@@ -1434,18 +1911,31 @@ body
 	.slideshow__main
 		margin-bottom: 10px
 		> div
-			width: 650px
+			margin: 0 auto
+			max-width: 650px
 			height: 435px
 			overflow: hidden
+			+r(768)
+				height: auto
 			img
 				display: block
-				min-width: 100%
-				max-height: 100%
+				width: 100%
+				height: 100%
 
 	.slideshow__slidepreview
 		position: relative
+		+r(1024)
+			width: 660px
+			margin: 0 auto
+		+r(768)
+			width: 401px
+		+r(450)
+			width: 278px
+
 		.slideshow__preview-overlay
 			position: relative
+			margin: 0 auto
+
 			&:before
 				position: absolute
 				top: 3px
@@ -1510,6 +2000,13 @@ body
 	background: #fff
 	+border-radius(3px)
 	display: none
+	+r(900)
+		width: 680px
+	+r(768)
+		width: 400px
+	+r(500)
+		width: 295px
+
 	// +transition(transform .1s ease-out)
 	// +translate(0,-25%)
 	.popup__close
@@ -1518,8 +2015,17 @@ body
 		right: 52px
 		+s(close)
 		cursor: pointer
+		+r(768)
+			right: 20px
+		+r(500)
+			right: 8px
+			top: 10px
 	.popup__in
 		padding: 42px 50px
+		+r(900)
+			padding: 42px 30px
+		+r(768)
+			padding: 42px 15px
 	.popup__columns
 		+clr
 		font-family: $font-base
@@ -1536,12 +2042,21 @@ body
 			width: 1px
 			background: #cfcfcf
 			content: ""
+			+r(768)
+				display: none
 	.popup__leftcol
 		float: left
 		width: 300px
+		+r(768)
+			width: 100%
 	.popup__rightcol
 		float: right
 		width: 255px
+		+r(768)
+			float: left
+			margin-top: 30px
+			width: 100%
+
 	.popup__sub
 		font-family: $font-base
 		font-size: 16px
@@ -1719,10 +2234,108 @@ body
 	bottom: 50px
 	right: 130px
 	+s(up)
+	+r(1024)
+		right: 50px
+	+r(500)
+		right: 20px
+		bottom: 30px
+
+// SIDEBAR-FOTO
+.nav-slide
+	margin: 0 11px
+	width: 100% 
+	&__item
+		padding-right: 3.5px
+		list-style: none
+		&:last-child
+			padding-right: 0
+
+.nav-slide 
+	img
+		cursor: pointer
+.sidebar-slider-main
+	position: relative
+	margin-top: 30px
+	.next_slide
+		position: absolute
+		top: 40%
+		right: 6px
+		z-index: 999
+		cursor: pointer
+		width: 37px
+		height: 50px
+		background-color: rgba(0,0,0,0.6)
+		i
+			display: block
+			+s(arrow_left-sidebar)
+	.prev_slide
+		@extend .next_slide 
+		left: auto
+		left: 10px 
+		i
+			+s(arrow_right-sidebar)
+			margin-left: 4px
+	.cycle-slide 
+		padding: 0 10px
+		text-align: center
+		width: 95%
+		height: 98% 
+.sidebar-slider__footer
+	padding: 0 10px 
+	.sidebar-slider__border	
+		width: 98%
+		margin: 0 auto
+		border-bottom: 1px solid #bebeb3
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25)
+		&-mod
+			width: 97%
+			margin-top: 2px
+	.sidebar-slider__title
+		padding: 10px 5px 0px
+		color: #0f0e0e
+		font-family: $font-alt
+		font-size: 18px
+		font-weight: 700
+		line-height: 23px
+.sidebar-section__border
+	margin: 20px 0 30px 0
+	border-bottom: 1px solid #cfcfcf
+	
+//READ MORE
+.section-read-more
+	float: right
+	padding: 20px
+	margin-left: 20px
+	width: 291px
+	background-color: #f3f2ef
+	h3
+		color: black
+		font-family: $font-alt
+		font-size: 20px
+		font-weight: 700
+		line-height: 19px
+		
+	p
+		display: inline-block
+		border-bottom: 1px solid #cfcecb
+		padding-bottom: 15px
+		margin-bottom: 0
+		margin-top: 15px
+		&:last-child
+			border-bottom: none
+		a
+			text-decoration: none
+			font-family: $font-alt
+			color: #333
+			font-size: 16px
+			font-weight: 400
+			line-height: 20px
+			display: block
 
 
 
-
+		
+	
 
 
 

@@ -84,7 +84,7 @@ $(document).ready(function() {
 			fx: "carousel",
 			autoHeight: "container",
 			timeout:  0,
-			carouselVisible: 3,
+			carouselVisible: 5,
 			slideActiveClass: "is-active",
 			pagerActiveClass: "is-active",
 			disabledClass: "is-disabled",
@@ -94,6 +94,7 @@ $(document).ready(function() {
 			slides: $('.caro-articles__slide', p),
 			prev:   $('.caro-articles__prev', p),
 			next:   $('.caro-articles__next', p),
+		
 		});
 	});
 
@@ -134,6 +135,22 @@ $(document).ready(function() {
 		});
 	});
 
+	$('.js-sidebar-slider').cycle({
+		fit: "sidebar-slider",
+		speed: 600,
+		next: '.next_slide',
+		prev: '.prev_slide',
+		timeout: 0,
+	});
+
+	$('.js-nav-slide').click(function() {
+		var index = $(this).data('index');
+		$(this).parents('.js-sidebar-parent').find('.js-sidebar-slider').cycle('goto', index);
+		$(this).parents('.js-nav-slider').cycle('goto', index);
+	});
+
+
+
 	// SLIDESHOW
 	var slideshows = $('.cycle-slideshow').on('cycle-next cycle-prev', function(e, opts) {
 		// advance the other slideshow
@@ -144,4 +161,9 @@ $(document).ready(function() {
 		slideshows.cycle('goto', index);
 	});
 
+
+	$('.js-menu-btn').on('click', function() {
+		$('.js-menu').toggleClass('is-actives');
+		return false;
+	});
 });

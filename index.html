@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
-	<meta name="viewport" content="width=1020">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" media="screen" href="css/screen.css">
 	<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,7 +56,8 @@
 	<!-- end header -->
 
 	<!-- begin nav -->
-	<div class="nav">
+	<div class="nav nav-mobile">
+
 		<ul>
 			<li class="is-active">
 				<a href="#"><b>Новости</b></a>
@@ -77,6 +78,34 @@
 			<li><a href="#"><b>Блоги</b></a></li>
 			<li><a href="#"><b>Контакты</b></a></li>
 		</ul>
+		<!--begin mobile -->
+		<div class="menu-mob js-menu-btn">
+			<a href="#"></a>
+		</div>
+		<div class="nav-mobile js-menu">
+					<ul>
+						<li class="is-active"><a href="#"><b>Новости</b></a>
+							<div class="dropdown-mobile">
+								<ul>
+									<li><a href="#">Все новости</a></li>
+									<li><a href="#">В Мире</a></li>
+									<li><a href="#">В Украине</a></li>
+									<li><a href="#">Киевские</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="#"><b>О нас</b></a></li>
+						<li><a href="#"><b>Форум</b></a></li>
+						<li><a href="#"><b>Фото и видео</b></a></li>
+						<li><a href="#"><b>Библиотека</b></a></li>
+						<li><a href="#"><b>Блоги</b></a></li>
+						<li><a href="#"><b>Контакты</b></a></li>
+					</ul>
+					<ul class="userlinks__s userlinks__m">
+							<li><a href="#" class="userlinks__signin g-pseudo"><b>Вход</b></a></li>
+							<li><a href="#" class="userlinks__signup g-pseudo">Регистрация</a></li>
+					</ul>
+			</div>
 	</div>
 	<!-- end nav -->
 
@@ -126,7 +155,8 @@
 								<!-- end article -->
 							</div>
 							<div class="mainslider__slide">
-								<!-- begin article -->
+								<!--
+								begin article -->
 								<div class="article article_extra">
 									<div class="article__info">
 										<div class="article__picture">
@@ -239,6 +269,7 @@
 				</div>
 			</div>
 			<!-- end topsection -->
+
 
 
 			<!-- BEGIN container -->
@@ -888,6 +919,46 @@
 						<!-- begin sidebar-slider -->
 						<div class="sidebar-slider">
 							<div class="h-bordered h-bordered__top"><a href="#">Фоторепортажи</a></div>
+							<div class="js-sidebar-parent">
+								<div class="sidebar-slider-main">
+									<div class="sidebar-slider__inner js-sidebar-slider">
+										<img src="img/sidebar-slider-item_1.jpg"  alt="">
+										<img src="img/sidebar-slider-item_2.jpg"  alt="">
+										<img src="img/sidebar-slider-item_3.jpg"  alt="">
+										<img src="img/sidebar-slider-item_4.jpg"  alt="">
+										<img src="img/sidebar-slider-item_5.jpg"  alt="">
+										<img src="img/sidebar-slider-item_6.jpg"  alt="">
+										<img src="img/sidebar-slider-item_7.jpg"  alt="">
+										<img src="img/sidebar-slider-item_8.jpg"  alt="">
+										<img src="img/sidebar-slider-item_4.jpg"  alt="">
+									</div>
+									<div class="next_slide"><i></i></div>
+									<div class="prev_slide"><i></i></div>
+								</div>
+								<div class="nav-slide js-nav-slider cycle-slideshow" 
+									data-cycle-fx=carousel
+								    data-cycle-timeout=0
+								    data-cycle-next=".next_slide"
+								    data-cycle-prev=".prev_slide"
+								    data-cycle-slides="div"
+								    data-cycle-carousel-visible=9 >
+									<div class="nav-slide__item js-nav-slide" data-index="0"><img src="img/sidebar-slider-item_1.jpg"  alt="" width="30" height="30"></div> 
+									<div class="nav-slide__item js-nav-slide" data-index="1"><img src="img/sidebar-slider-item_2.jpg"  alt="" width="30" height="30"></div> 
+									<div class="nav-slide__item js-nav-slide" data-index="2"><img src="img/sidebar-slider-item_3.jpg"  alt="" width="30" height="30"></div> 
+									<div class="nav-slide__item js-nav-slide" data-index="3"><img src="img/sidebar-slider-item_4.jpg"  alt="" width="30" height="30"></div> 
+									<div class="nav-slide__item js-nav-slide" data-index="4"><img src="img/sidebar-slider-item_5.jpg"  alt="" width="30" height="30"></div> 
+									<div class="nav-slide__item js-nav-slide" data-index="5"><img src="img/sidebar-slider-item_6.jpg"  alt="" width="30" height="30"></div> 
+									<div class="nav-slide__item js-nav-slide" data-index="6"><img src="img/sidebar-slider-item_7.jpg"  alt="" width="30" height="30"></div> 
+									<div class="nav-slide__item js-nav-slide" data-index="7"><img src="img/sidebar-slider-item_8.jpg"  alt="" width="30" height="30"></div> 
+									<div class="nav-slide__item js-nav-slide" data-index="8"><img src="img/sidebar-slider-item_4.jpg"  alt="" width="30" height="30"></div> 
+								</div>
+							</div>
+							<div class="sidebar-slider__footer">
+								<div class="sidebar-slider__border"></div>
+								<div class="sidebar-slider__border sidebar-slider__border-mod"></div>
+								<div class="sidebar-slider__title">Прошла новая выставка Аркадия Мамонина в Киеве</div>
+							</div>
+							<div class="sidebar-section__border"></div>
 						</div>
 						<!-- end sidebar-slider -->
 						
@@ -897,20 +968,82 @@
 							<div class="news">
 							<a href="#" class="news__href">
 								<div class="news__media">
-									<img src="img/pic_sm_1.jpg" alt="img">
+									<img src="img/video_img.jpg" alt="img">
 									<div class="btn-play"></div>
 								</div>
-								<div class="news__desc">Звезда "Титаника" Кейт Уинслет получила звездуна "Аллее славы"</div>
+								<div class="news__desc">Новое видео Светланы Байдачной уже у нас на портале</div>
 							</a>
 							</div>
+							<div class="sidebar-section__border"></div>
 						</div>
 						<!-- end sidebar-video -->
 
-						
+						<!-- begin sidebar-meeting -->
+						<div class="sidebar-meeting">
+							<div class="meeting-title h2"><a href="#">Ближайшие мероприятия</a></div>
+							<div class="meeting-select">
+								<p class="meeting-select__city">Город</p>
+								<div class="meeting-select__in">
+								<select name="city" id="" >
+									<option>Киев</option>
+									<option>Харьков</option>
+									<option>Одесса</option>
+								</select>
+								<div class="select__in-arrow"></div>
+								</div>
+							</div>
+							<div class="meeting-item">
+								<div class="meeting-item__border"></div>
+								<a href="#">
+									<p class="meeting-item__title">Валентина Гафта переводят из реанимации в хирургическое отделение<br> <span>22 сентября</span></p>
+								</a>
+							</div>
+							<div class="meeting-item">
+								<div class="meeting-item__border"></div>
+								<a href="#">
+									<p class="meeting-item__title">В Красноярске готовится к открытию фестиваль «Театральная весна-2014» Было замечательно<br> <span>28 сентября</span></p>
+								</a>
+							</div>
+							<div class="meeting-item">
+								<div class="meeting-item__border"></div>
+								<a href="#">
+									<p class="meeting-item__title">Артист и режиссер Андрей Денников скончался в Москве <br><span>10 октября</span></p>
+								</a>
+							</div>
+							<div class="meeting-item">
+								<div class="meeting-item__border"></div>
+								<a href="#">
+									<p class="meeting-item__title">Актер Крис Пайн признался в управлении авто под воздействием алкоголя<br> <span>12 октября</span></p>
+								</a>
+							</div>
+							<div class="meeting-item">
+								<div class="meeting-item__border"></div>
+								<a href="#">
+									<p class="meeting-item__title">Выставка "живых" картин о Крыме открывается в Москве<br> <span>15 октября</span></p>
+								</a>
+							</div>
+							
+						</div>
+						<!-- end sidebar-meeting -->
 
-						<div class="h-bordered h-bordered__top"><a href="#">Пользовательские теги</a></div>
+						<!-- begin sidebar-tags -->
+						<div class="sidebar-tags">
+							<div class="h-bordered h-bordered__top"><a href="#">Пользовательские теги</a></div>
+							<ul class="tags-list">
+								<li><a href="#">Новости</a></li>
+								<li><a href="#">Украина</a></li>
+								<li><a href="#">Происшествия</a></li>
+								<li><a href="#">События в стране</a></li>
+								<li><a href="#">Сообщество</a></li>
+								<li><a href="#">Мероприятия</a></li>
+								<li><a href="#">Политика</a></li>
+								<li><a href="#">Общество</a></li>
+							</ul>
+						</div>
+						<!-- end sidebar-tags -->
+
 					</div>
-				
+					<!-- end column -->
 
 				</div>
 			</div>
@@ -918,472 +1051,32 @@
 
 
 			
-				<div class="row">
-					<div class="column">
-						
-						<div class="section">
-							<!-- begin article -->
-							<div class="article">
-								<div class="article__info">
-									<a href="#" class="article__href"></a>
-									<div class="article__picture">
-										<img src="img/pic_1.jpg" alt="img">
-									</div>
-									<div class="label">В мире</div>
-									<div class="article__meta">
-										<ul>
-											<li>13 марта</li>
-											<li>Путешествия</li>
-											<li><i class="icon-comments"></i>11</li>
-										</ul>
-									</div>
-								</div>
-								<div class="article__txt">
-									<div class="article__title"><a href="#">Сто тысяч россиян поддержали отмену «мигалок» для чиновников</a></div>
-								</div>
-							</div>
-							<!-- end article -->
-						</div>
-						<div class="row">
-							<div class="column">
-								
-							</div>
-							<div class="column">
-								<!-- begin article -->
-								<div class="article">
-									<div class="article__info">
-										<a href="#" class="article__href"></a>
-										<div class="article__picture">
-											<img src="img/pic_4.jpg" alt="img">
-										</div>
-										<div class="label">В мире</div>
-										<div class="article__meta">
-											<ul>
-												<li>10 марта</li>
-												<li>Политика</li>
-												<li><i class="icon-comments"></i>44</li>
-											</ul>
-										</div>
-									</div>
-									<div class="article__txt">
-										<div class="article__title"><a href="#">СМИ: фирмы из РФ заинтересованы в отправке работников на отдых в Крым</a></div>
-									</div>
-								</div>
-								<!-- end article -->
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="column">
-								
-							</div>
-							
-						</div>
-					</div>
-
-
-
-
-
-
-
-
-
-					<div class="section">
-						<div class="h-bordered"><a href="#">В Мире</a></div>
-						<div class="row">
-							<div class="column">
-								<!-- begin article -->
-								<div class="article article_lg">
-									<div class="article__info">
-										<a href="#" class="article__href"></a>
-										<div class="article__picture">
-											<img src="img/pic_7.jpg" alt="img">
-										</div>
-										<div class="article__meta">
-											<ul>
-												<li>10 марта</li>
-												<li>Интервью</li>
-												<li><i class="icon-comments"></i>10</li>
-											</ul>
-										</div>
-									</div>
-									<div class="article__txt">
-										<div class="article__title"><a href="#">Интервью с пингвином после того, как он узнал, что не является повелителем мира</a></div>
-										<p>15 марта в США 29-летний украинский супертяжеловес Вячеслав Глазков встретился с бывшим чемпионом мира в двух весовых категориях 37-летним поляком Томашем.</p>
-									</div>
-								</div>
-								<!-- end article -->
-							</div>
-							<div class="column">
-								<!-- begin articles -->
-								<div class="articles">
-									<!-- begin article -->
-									<div class="article article_sm">
-										<div class="article__info">
-											<a href="#" class="article__href"></a>
-											<div class="article__picture">
-												<img src="img/pic_sm_1.jpg" alt="img">
-											</div>
-										</div>
-										<div class="article__txt">
-											<div class="article__meta">
-												<ul>
-													<li>11 марта</li>
-													<li>Мнение</li>
-													<li><i class="icon-comments_dark"></i>39</li>
-												</ul>
-											</div>
-											<div class="article__title"><a href="#">В Воронеже впервые пройдет международный фестиваль Усадьба Jazz</a></div>
-										</div>
-									</div>
-									<!-- end article -->
-									<!-- begin article -->
-									<div class="article article_sm">
-										<div class="article__info">
-											<a href="#" class="article__href"></a>
-											<div class="article__picture">
-												<img src="img/pic_sm_2.jpg" alt="img">
-											</div>
-										</div>
-										<div class="article__txt">
-											<div class="article__meta">
-												<ul>
-													<li>11 марта</li>
-													<li>Мнение</li>
-													<li><i class="icon-comments_dark"></i>39</li>
-												</ul>
-											</div>
-											<div class="article__title"><a href="#">Энергоконцерн RWE договорился о продаже своей «дочки» Dea</a></div>
-										</div>
-									</div>
-									<!-- end article -->
-									<!-- begin article -->
-									<div class="article article_sm">
-										<div class="article__info">
-											<a href="#" class="article__href"></a>
-											<div class="article__picture">
-												<img src="img/pic_sm_3.jpg" alt="img">
-											</div>
-										</div>
-										<div class="article__txt">
-											<div class="article__meta">
-												<ul>
-													<li>11 марта</li>
-													<li>Мнение</li>
-													<li><i class="icon-comments_dark"></i>39</li>
-												</ul>
-											</div>
-											<div class="article__title"><a href="#">Биржи Европы закрылись в основном снижением в ожидании референдума</a></div>
-										</div>
-									</div>
-									<!-- end article -->
-									<!-- begin article -->
-									<div class="article article_sm">
-										<div class="article__info">
-											<a href="#" class="article__href"></a>
-											<div class="article__picture">
-												<img src="img/pic_sm_4.jpg" alt="img">
-											</div>
-										</div>
-										<div class="article__txt">
-											<div class="article__meta">
-												<ul>
-													<li>11 марта</li>
-													<li>Мнение</li>
-													<li><i class="icon-comments_dark"></i>39</li>
-												</ul>
-											</div>
-											<div class="article__title"><a href="#">Юбилей Лермонтова отметят в Петербурге выставками и спектаклями</a></div>
-										</div>
-									</div>
-									<!-- end article -->
-								</div>
-								<!-- end articles -->
-							</div>
-						</div>
-					</div>
-
-
+			<div class="row">
+				<!-- begin container -->
+				<div class="container">
+					
+				
 					<!-- <div class="section"> -->
 						<!-- begin banner -->
 						<!-- <div class="banner"></div> -->
 						<!-- end banner -->
 					<!-- </div> -->
 
-
-
-
-					<div class="section">
-						<div class="h-bordered"><a href="#">В Европе</a></div>
-						<div class="caro-articles">
-							<div class="caro-articles__wrap">
-								<div class="caro-articles__in js-caroarticles">
-										<div class="caro-articles__slide">
-											<!-- begin article -->
-											<div class="article article_sm article_vert">
-												<div class="article__info">
-													<a href="#" class="article__href"></a>
-													<div class="article__picture">
-														<img src="img/pic_sm_4.jpg" alt="img">
-													</div>
-												</div>
-												<div class="article__txt">
-													<div class="article__meta">
-														<ul>
-															<li>11 марта</li>
-															<li>Мнение</li>
-														</ul>
-													</div>
-													<div class="article__title"><a href="#">Юбилей Лермонтова отметят в Петербурге выставками и спектаклями</a></div>
-												</div>
-											</div>
-											<!-- end article -->
-										</div>
-										<div class="caro-articles__slide">
-											<!-- begin article -->
-											<div class="article article_sm article_vert">
-												<div class="article__info">
-													<a href="#" class="article__href"></a>
-													<div class="article__picture">
-														<img src="img/pic_sm_4.jpg" alt="img">
-													</div>
-												</div>
-												<div class="article__txt">
-													<div class="article__meta">
-														<ul>
-															<li>11 марта</li>
-															<li>Мнение</li>
-														</ul>
-													</div>
-													<div class="article__title"><a href="#">Михалок заявил, что с 1 сентября распустит группу "Ляпис Трубецкой"</a></div>
-												</div>
-											</div>
-											<!-- end article -->
-										</div>
-										<div class="caro-articles__slide">
-											<!-- begin article -->
-											<div class="article article_sm article_vert">
-												<div class="article__info">
-													<a href="#" class="article__href"></a>
-													<div class="article__picture">
-														<img src="img/pic_sm_4.jpg" alt="img">
-													</div>
-												</div>
-												<div class="article__txt">
-													<div class="article__meta">
-														<ul>
-															<li>11 марта</li>
-															<li>Мнение</li>
-														</ul>
-													</div>
-													<div class="article__title"><a href="#">Алина Орлова: Жить хорошо, даже когда тяжело</a></div>
-												</div>
-											</div>
-											end article
-										</div>
-										<div class="caro-articles__slide">
-											<!-- begin article -->
-											<div class="article article_sm article_vert">
-												<div class="article__info">
-													<a href="#" class="article__href"></a>
-													<div class="article__picture">
-														<img src="img/pic_sm_4.jpg" alt="img">
-													</div>
-												</div>
-												<div class="article__txt">
-													<div class="article__meta">
-														<ul>
-															<li>11 марта</li>
-															<li>Мнение</li>
-														</ul>
-													</div>
-													<div class="article__title"><a href="#">Юбилей Лермонтова отметят в Петербурге выставками и спектаклями</a></div>
-												</div>
-											</div>
-											<!-- end article -->
-										</div>
-										<div class="caro-articles__slide">
-											<!-- begin article -->
-											<div class="article article_sm article_vert">
-												<div class="article__info">
-													<a href="#" class="article__href"></a>
-													<div class="article__picture">
-														<img src="img/pic_sm_4.jpg" alt="img">
-													</div>
-												</div>
-												<div class="article__txt">
-													<div class="article__meta">
-														<ul>
-															<li>11 марта</li>
-															<li>Мнение</li>
-														</ul>
-													</div>
-													<div class="article__title"><a href="#">Михалок заявил, что с 1 сентября распустит группу "Ляпис Трубецкой"</a></div>
-												</div>
-											</div>
-											<!-- end article -->
-										</div>
-										<div class="caro-articles__slide">
-											<!-- begin article -->
-											<div class="article article_sm article_vert">
-												<div class="article__info">
-													<a href="#" class="article__href"></a>
-													<div class="article__picture">
-														<img src="img/pic_sm_4.jpg" alt="img">
-													</div>
-												</div>
-												<div class="article__txt">
-													<div class="article__meta">
-														<ul>
-															<li>11 марта</li>
-															<li>Мнение</li>
-														</ul>
-													</div>
-													<div class="article__title"><a href="#">Алина Орлова: Жить хорошо, даже когда тяжело</a></div>
-												</div>
-											</div>
-											<!-- end article -->
-										</div>
-								</div>
-								<div class="caro-articles__prev">prev</div>
-								<div class="caro-articles__next">next</div>
-							</div>
-						</div>
-				</div>
-				</div>
-				
-
-
-
-
-				<div class="l-sidebar">
-					
-					
-					
-					<!-- begin vote -->
-					<div class="vote">
-						<div class="h-bordered h-bordered_mod"><a href="#">Опрос</a></div>
-						<div class="vote__in">
-							<div class="vote__desc">Как вам наш новый дизайн сайта, который мы делали с любовью?</div>
-							<div class="vote__option">
-								<div class="radio">
-									<label>
-										<input type="radio" name="radioVote" checked=""><i></i> Это просто космос
-									</label>
-								</div>
-								<div class="radio">
-									<label>
-										<input type="radio" name="radioVote" checked=""><i></i> Очень нравится
-									</label>
-								</div>
-								<div class="radio">
-									<label>
-										<input type="radio" name="radioVote" checked=""><i></i> Могли бы и лучше сделать
-									</label>
-								</div>
-								<div class="radio">
-									<label>
-										<input type="radio" name="radioVote" checked=""><i></i> Ерунда полная
-									</label>
-								</div>
-							</div>
-							<div class="vote__action">
-								<a href="#" class="vote__results">Показать результаты</a>
-								<button class="btn btn_lg vote__submit" type="submit">Ответить</button>
-							</div>
-						</div>
+				<!-- begin section-bank -->
+				<div class="section-bank">
+					<div class="section-bank__item">
+						<a href="#" class="bank__item-yugra"></a>
+						<a href="#" class="bank__item-binbank"></a>
+						<a href="#" class="bank__item-mtbank"></a>
+						<a href="#" class="bank__item-imoneybank"></a>
+						<a href="#" class="bank__item-germania"></a>
 					</div>
-					<!-- end vote -->
-					
 				</div>
-			
-		</div>
-		<!-- begin partners -->
-					<div class="partners">
-						<div class="h-bordered h-bordered_mod"><a href="#">Партнеры</a></div>
-						<div class="partners__in js-partners">
-							<div class="partners__slide">
-								<img src="img/partner_1.jpg" alt="partner">
-							</div>
-							<div class="partners__slide">
-								<img src="img/partner_1.jpg" alt="partner">
-							</div>
-							<div class="partners__slide">
-								<img src="img/partner_1.jpg" alt="partner">
-							</div>
-							<div class="partners__slide">
-								<img src="img/partner_1.jpg" alt="partner">
-							</div>
-							<div class="partners__slide">
-								<img src="img/partner_1.jpg" alt="partner">
-							</div>
-						</div>
-						<div class="partners__pager"></div>
-					</div>
-					<!-- end partners -->
-		<!-- end content -->
-		<!-- begin report -->
-		<!-- <div class="report">
-			<div class="container">
-				<div class="report__head">
-					<div class="h2"><a href="#">Фото и видео репортажи <i class="report__headicon icon-report"></i></a></div>
-				</div>
-				<div class="report__cols">
-					<div class="report__left">
-						<div class="news news_lg">
-							<a href="#" class="news__href">
-								<div class="news__media">
-									<img src="img/news_1.jpg" alt="img">
-								</div>
-								<div class="news__desc">Звезда "Титаника" Кейт Уинслет получила звезду на "Аллее славы"</div>
-							</a>
-						</div>
-					</div>
-					<div class="report__right">
-						<div class="report__items">
-							<div class="news">
-								<a href="#" class="news__href">
-									<div class="news__media">
-										<img src="img/news_2.jpg" alt="img">
-										<div class="btn-play"></div>
-									</div>
-									<div class="news__desc">Звезда "Титаника" Кейт Уинслет получила звезду на "Аллее славы"</div>
-								</a>
-							</div>
-							<div class="news">
-								<a href="#" class="news__href">
-									<div class="news__media">
-										<img src="img/news_3.jpg" alt="img">
-									</div>
-									<div class="news__desc">Выступление группы "Океан Ельзи" в филармонии Кургана отменено</div>
-								</a>
-							</div>
-						</div>
-						<div class="report__items">
-							<div class="news">
-								<a href="#" class="news__href">
-									<div class="news__media">
-										<img src="img/news_4.jpg" alt="img">
-									</div>
-									<div class="news__desc">В Киеве пройдет выставка немецкой художницы Наоми Лоренс </div>
-								</a>
-							</div>
-							<div class="news">
-								<a href="#" class="news__href">
-									<div class="news__media">
-										<img src="img/news_5.jpg" alt="img">
-										<div class="btn-play"></div>
-									</div>
-									<div class="news__desc">Rolling Stones отменила концерт из-за гибели подруги Мика Джаггера</div>
-								</a>
-							</div>
-						</div>
-					</div>
+				<!-- end section-bank -->
 				</div>
 			</div>
-		</div> -->
-		<!-- end report -->
+				<!-- end container -->
+		</div>
 	</div>
 	<!-- end page -->
 
