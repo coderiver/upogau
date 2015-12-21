@@ -193,7 +193,7 @@ body { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-s
 .nav { border-bottom: 3px solid #d0d0ce; margin-bottom: 22px; position: relative; }
 @media only screen and (max-width: 1024px) { .nav { width: 96%; margin: 0 2%; } }
 @media only screen and (max-width: 768px) { .nav { border-bottom: none; } }
-.nav.has-dropdown { margin-bottom: 60px; }
+.nav.has-dropdown { margin-bottom: 25px; }
 @media only screen and (max-width: 768px) { .nav.has-dropdown { margin-bottom: 0; } }
 .nav.has-dropdown .dropdown.is-open { display: block; }
 .nav > ul { position: relative; text-align: justify; line-height: 0; font-size: 1px; text-justify: newspaper; zoom: 1; text-align-last: justify; }
@@ -392,7 +392,7 @@ body { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-s
 .tags-list a { display: inline-block; padding: 5px 10px; background-color: #ececec; border-radius: 3px; text-decoration: none; font-size: 17px; color: #6f6f6f; }
 
 .section-bank { width: 100%; border-top: 1px solid rgba(202, 209, 216, 0.3); border-bottom: 1px solid rgba(202, 209, 216, 0.3); }
-.section-bank__item { line-height: 11; text-align: center; }
+.section-bank__item { line-height: 10; padding-top: 10px; text-align: center; }
 .section-bank__item a { margin-right: 2%; }
 .section-bank__item a:last-child { margin-right: 0; }
 .section-bank__item .bank__item-yugra { background-image: url(../img/logo-bank-yugra.png); width: 175px; height: 31px; display: inline-block; }
@@ -713,6 +713,9 @@ body { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-s
 .scrollup { position: absolute; bottom: 15px; right: 25px; background: url('../img/icons-s73943152f7.png') 0 -1612px no-repeat; width: 41px; height: 51px; }
 @media only screen and (max-width: 1024px) { .scrollup { right: 50px; } }
 @media only screen and (max-width: 500px) { .scrollup { right: 20px; bottom: 30px; } }
+
+.scrollup__mod { right: 143px; bottom: 320px; }
+@media only screen and (max-width: 1024px) { .scrollup__mod { bottom: 25px; right: 10px; } }
 
 .nav-slide { margin: 0 11px; }
 @media only screen and (max-width: 1024px) { .nav-slide { width: 96% !important; } }
