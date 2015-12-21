@@ -1,4 +1,5 @@
-
+// body *
+// 	border: 1px solid red 
 
 body
 	font-family: $font-base
@@ -23,7 +24,7 @@ body
 	+clr
 	margin-left: -20px
 	+r(1024)
-		margin-left: 0
+		margin: 0 15px
 
 .column
 	float: left
@@ -40,10 +41,17 @@ body
 	float: left
 	//width: 480px
 	margin-left: 20px
+
 .column-sm
 	float: left
 	width: 235px
 	margin-left: 20px
+	
+.column-mobile
+	+r(1024)
+		width: auto
+		margin: 0 auto
+	
 .section
 	margin-bottom: 30px
 
@@ -222,10 +230,11 @@ body
 			float: right
 			margin-top: 20px
 			margin-bottom: 60px
-		+r(660)
+		+r(703)
+			float: none
 			margin-top: 0
 			margin-bottom: 20px
-			width: 160px
+			// width: 160px
 
 
 // Social buttons
@@ -233,7 +242,7 @@ body
 .social
 	display: inline-block
 	+clr
-	+r(660)
+	+r(703)
 		display: block
 		float: right
 		+clr
@@ -247,6 +256,14 @@ body
 		margin-left: 1px
 		&:first-child
 			margin-left: 0
+	.social__item-mod
+		display: inline-block
+		+r(704)
+			display: block
+			margin-bottom: 5px
+			&:last-child
+				margin-bottom: 0
+		
 	.social__vk
 		+s(vk)
 	.social__fb
@@ -267,10 +284,11 @@ body
 	position: relative
 	margin-left: 20px
 	padding-top: 5px
-	+r(660)
+	+r(703)
 		display: block
-		padding-top: 45px
+		padding-top: 120px
 		margin-left: 0
+		float: none
 	.search__query
 		font-family: $font-alt
 		width: 302px
@@ -285,8 +303,9 @@ body
 		+box-shadow(0px -1px 1px -1px rgba(#000, .7))
 		&:focus
 			+placeholder-color(transparent)
-		+r(768)
-			width: 160px
+		+r(810)
+			width: 200px
+			padding: 0 25px 0 12px
 	.search__submit
 		position: absolute
 		top: 50%
@@ -294,8 +313,9 @@ body
 		right: 13px
 		+s(search)
 		+hidetext
-		+r(660)
-			top: 78%
+		+r(703)
+			top: 88%
+			left: 175px
 
 // User links & languages
 // --------------------------------------------------
@@ -304,34 +324,39 @@ body
 	display: inline-block
 	vertical-align: top
 	padding-top: 11px
+	+r(704)
+		float: left
+		padding-top: 25px
+		
 	ul
 		display: inline-block
 		+r(900)
 			margin-left: 10px
-
-
+		+r(704)	
+			margin-left: 0
 	li
 		display: inline-block
 		margin-left: 21px
-
 		&:first-child
+			margin-left: 0
+		+r(704)	
 			margin-left: 0
 	a
 		color: #000
 		text-decoration: none
 		&:hover
 			text-decoration: underline
-.userlinks__s
-	li
-		+r(768)
-			display: none
-.userlinks__m
-	li
-		width: 110px
-		+r(768)
-			display: inline-block
-	&:hover
-		cursor: pointer
+// .userlinks__s
+// 	li
+// 		+r(810)
+// 			display: none
+// .userlinks__m
+// 	li
+// 		width: 110px
+// 		+r(810)
+// 			display: inline-block
+// 	&:hover
+// 		cursor: pointer
 
 
 
@@ -342,6 +367,8 @@ body
 	margin-left: 23px
 	+r(900)
 		margin-left: 10px
+	+r(704)	
+		padding-left: 0
 	&:before
 		position: absolute
 		top: 50%
@@ -351,7 +378,7 @@ body
 		height: 18px
 		background: #7f7f7f
 		content: ""
-		+r(768)
+		+r(810)
 			display: none
 
 	li
@@ -366,12 +393,19 @@ body
 	@extend %in
 	margin-bottom: 17px
 	+clr
+	+r(1024)
+		width: 96%
+		margin: 1% 2%
 	li
 		font-family: $font-alt-bold
 		&:first-child
 			float: left
+			+r(600)
+				float: none
 		&:last-child
 			float: right
+			+r(600)
+				float: none
 		a
 			color: #000
 			text-transform: uppercase
@@ -501,7 +535,6 @@ body
 		width: auto
 		background-color: #d0d0ce
 		border: 1px solid rgba(0, 0, 0, 0.15)
-		height: 324px
 		z-index: 9999
 		text-align: center
 	.is-actives
@@ -633,9 +666,13 @@ body
 	font-family: $font-alt
 	&:first-child
 		margin-top: 65px
+		+r(768)
+			margin-top: 0
+			 
 
 	.tabloid-item
 		&__title
+			margin-bottom: 5px
 			li
 				position: relative
 				display: inline-block
@@ -647,9 +684,13 @@ body
 				&:nth-child(2)
 					color: #0f0e0e
 					margin-right: 24px
+					+r(768)
+						margin-right: 15px
 				&:nth-child(3)
 					color: #6f6f70
 					margin-right: 24px
+					+r(768)
+						margin-right: 15px
 					&:before
 						position: absolute
 						top: 1px
@@ -1052,7 +1093,7 @@ body
 //MITING
 
 .sidebar-meeting
-	padding: 20px
+	padding: 20px 20px 0 20px
 	background-color: #e1e1e0
 	margin-bottom: 30px
 	.meeting-title
@@ -1106,13 +1147,17 @@ body
 			border-top: 1px solid white
 			width: 360px
 			margin-left: -20px
+			+r(1024)
+				width: auto
+				margin-left: 0
 		&__title
 			padding: 20px 10px 20px 5px
 			font-size: 14px
 			line-height: 18px
 			color: #222
-			&:last-child
-				padding: 20px 10px 0px 5px
+		// &__title-last-child
+		// 	padding: 20px 10px 0px 5px
+			
 			span
 				color: #fa6000
 				font-size: 14px
@@ -2268,8 +2313,8 @@ body
 // scrollup
 .scrollup
 	position: absolute
-	bottom: 50px
-	right: 130px
+	bottom: 15px
+	right: 25px
 	+s(up)
 	+r(1024)
 		right: 50px
@@ -2280,7 +2325,11 @@ body
 // SIDEBAR-FOTO
 .nav-slide
 	margin: 0 11px
-	width: 100%
+	+r(1024)
+		width: 96% !important
+	+r(355)
+		width: 200px !important
+		margin: 0 17%
 	&__item
 		padding-right: 3.5px
 		list-style: none
@@ -2293,15 +2342,18 @@ body
 .sidebar-slider-main
 	position: relative
 	margin-top: 30px
+	width: 97%
 	.next_slide
 		position: absolute
 		top: 40%
-		right: 6px
+		right: -3px
 		z-index: 999
 		cursor: pointer
 		width: 37px
 		height: 50px
 		background-color: rgba(0,0,0,0.6)
+		+r(1024)
+			right: -10px
 		i
 			display: block
 			+s(arrow_left-sidebar)
@@ -2315,8 +2367,10 @@ body
 	.cycle-slide
 		padding: 0 10px
 		text-align: center
-		width: 95%
+		width: 98%
 		height: 98%
+		+r(1024)
+			width: 100%
 .sidebar-slider__footer
 	padding: 0 10px
 	.sidebar-slider__border
@@ -2345,6 +2399,9 @@ body
 	margin-left: 25px
 	width: 291px
 	background-color: #f3f2ef
+	+r(768)
+		width: auto
+		margin-left: 0
 	h3
 		color: black
 		font-family: $font-alt
@@ -2360,6 +2417,9 @@ body
 		margin-top: 15px
 		&:last-child
 			border-bottom: none
+		+r(768)
+			display: block
+
 		a
 			text-decoration: none
 			font-family: $font-alt
