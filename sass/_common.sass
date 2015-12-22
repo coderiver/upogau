@@ -1650,8 +1650,7 @@ body
 			padding: 0 0 10px 0
 		&:last-child
 			border-bottom: none
-		 
-
+			
 	&__left-side
 		display: inline-block
 		float: left
@@ -2464,10 +2463,85 @@ body
 			line-height: 20px
 			display: block
 
+//CALENDAR
+.sidebar-calendar
+	margin-top: 20px
+	background-color: #f3f2ef
+	border-radius: 4px
+	&__header
+		padding: 25px 15px
+.sidebar-calendar__mod
+	margin-bottom: 20px 
 
+.sidebar-calendar__month
+	position: relative
+	display: inline-block
+	width: 151px
+	border: 1px solid #e6e6e6
+	box-sizing: border-box
+	border-radius: 4px
+	overflow: hidden
+	margin-right: 7px 
+.calendar-month
+	padding-right: 30px
+	width: 165px
+	background-color: #f3f2ef
+	padding: 10px 15px
+	border: none
+	color: #707072
+	font-family: $font-alt
+	font-size: 16px
+	font-weight: 400
+	line-height: 24px
+.sidebar-calendar__years
+	@extend .sidebar-calendar__month
+	width: 123px
+	margin-right: 0
+.calendar-years
+	@extend .calendar-month
+	width: 140px
+			
+.select__in-arrow
+	display: inline-block
+	position: absolute
+	top: 18px
+	right: 15px
+	+s(select)
+.calendar-border
+	border: 1px solid rgba(#2262bb, .1)
+.calendar-section
+	padding: 20px 15px
+.calendar-body
+	// margin: 15px 10px 
+	text-align: center
+	a
+		color: #3e6372
+		font-family: $font-alt
+		font-size: 12px
+		font-weight: 700
+		line-height: 20px
+		text-decoration: none
+.calendar-body__line
+	td
+		padding: 10px
 
-
-
+.calendar-weekend
+	a
+		font-size: 15px
+.calendar-next-moth
+	a
+		color: #b2d4dc
+.calendar-active
+	a
+		padding: 3px
+		background-color: #e1e1e5
+		border-radius: 50%
+.calendar-active__mod
+	a
+		background-color: #fa6000
+		border-radius: 50%	
+		padding: 3px
+		color: white 
 
 
 

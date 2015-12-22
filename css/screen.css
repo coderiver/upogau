@@ -755,3 +755,35 @@ body { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; font-s
 .section-read-more p:last-child { border-bottom: none; }
 @media only screen and (max-width: 768px) { .section-read-more p { display: block; } }
 .section-read-more p a { text-decoration: none; font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; color: #333; font-size: 16px; font-weight: 400; line-height: 20px; display: block; }
+
+.sidebar-calendar { margin-top: 20px; background-color: #f3f2ef; border-radius: 4px; }
+.sidebar-calendar__header { padding: 25px 15px; }
+
+.sidebar-calendar__mod { margin-bottom: 20px; }
+
+.sidebar-calendar__month, .sidebar-calendar__years { position: relative; display: inline-block; width: 151px; border: 1px solid #e6e6e6; box-sizing: border-box; border-radius: 4px; overflow: hidden; margin-right: 7px; }
+
+.calendar-month, .calendar-years { padding-right: 30px; width: 165px; background-color: #f3f2ef; padding: 10px 15px; border: none; color: #707072; font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; }
+
+.sidebar-calendar__years { width: 123px; margin-right: 0; }
+
+.calendar-years { width: 140px; }
+
+.select__in-arrow { display: inline-block; position: absolute; top: 18px; right: 15px; background: url('../img/icons-s73943152f7.png') 0 -1301px no-repeat; width: 10px; height: 6px; }
+
+.calendar-border { border: 1px solid rgba(34, 98, 187, 0.1); }
+
+.calendar-section { padding: 20px 15px; }
+
+.calendar-body { text-align: center; }
+.calendar-body a { color: #3e6372; font-family: "PT Sans", Arial, "Helvetica Neue", Helvetica, sans-serif; font-size: 12px; font-weight: 700; line-height: 20px; text-decoration: none; }
+
+.calendar-body__line td { padding: 10px; }
+
+.calendar-weekend a { font-size: 15px; }
+
+.calendar-next-moth a { color: #b2d4dc; }
+
+.calendar-active a { padding: 3px; background-color: #e1e1e5; border-radius: 50%; }
+
+.calendar-active__mod a { background-color: #fa6000; border-radius: 50%; padding: 3px; color: white; }

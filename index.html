@@ -960,7 +960,7 @@
 							<div class="meeting-select">
 								<p class="meeting-select__city">Город</p>
 								<div class="meeting-select__in">
-								<select name="city" id="" >
+								<select  name="city" id="" >
 									<option>Киев</option>
 									<option>Харьков</option>
 									<option>Одесса</option>
@@ -1005,6 +1005,7 @@
 						<!-- begin sidebar-tags -->
 						<div class="sidebar-tags">
 							<div class="h-bordered h-bordered__top"><a href="#">Пользовательские теги</a></div>
+
 							<ul class="tags-list">
 								<li><a href="#">Новости</a></li>
 								<li><a href="#">Украина</a></li>
@@ -1017,6 +1018,90 @@
 							</ul>
 						</div>
 						<!-- end sidebar-tags -->
+
+						<!-- begin sidebar-calendar -->
+						<div class="sidebar-calendar">
+							<div class="sidebar-calendar__header">
+								<div class="meeting-title h2 sidebar-calendar__mod"><a href="#">Календарь мероприятий</a></div>
+								<div class="sidebar-calendar__month">
+									<select class="calendar-month" name="month" id="" >
+										<option>Январь</option>
+										<option>Февраль</option>
+										<option>Март</option>
+										<option>Апрель</option>
+										<option>Май</option>
+										<option>Июнь</option>
+										<option>Июль</option>
+										<option>Август</option>
+										<option>Сентябрь</option>
+										<option>Октябрь</option>
+										<option>Ноябрь</option>
+										<option>Декабрь</option>
+									</select>
+									<div class="select__in-arrow"></div>
+								</div>
+								<div class="sidebar-calendar__years">
+									<select class="calendar-years" name="years" id="" >
+										<option>2015</option>
+										<option>2016</option>
+										<option>2017</option>
+									</select>
+									<div class="select__in-arrow"></div>
+								</div>
+							</div>
+							<div class="calendar-border"></div>
+							<div class="calendar-section">
+							<table class="calendar-body">
+							  <tr class="calendar-body__line">
+							    <td><a href="#">1</a></td>
+							    <td><a href="#">2</a></td>
+							    <td><a href="#">3</a></td>
+							    <td><a href="#">4</a></td>
+							    <td><a href="#">5</a></td>
+							    <td class="calendar-weekend"><a href="#">6</a></td>
+							    <td class="calendar-weekend"><a href="#">7</a></td>
+							  </tr>
+							  <tr class="calendar-body__line">
+							    <td><a href="#">8</a></td>
+							    <td><a href="#">9</a></td>
+							    <td><a href="#">10</a></td>
+							    <td class="calendar-active"><a href="#">11</a></td>
+							    <td><a href="#">12</a></td>
+							    <td class="calendar-weekend"><a href="#">13</a></td>
+							    <td class="calendar-weekend"><a href="#">14</a></td>
+							  </tr>
+							  <tr class="calendar-body__line">
+							    <td><a href="#">15</a></td>
+							    <td><a href="#">16</a></td>
+							    <td><a href="#">17</a></td>
+							    <td><a href="#">18</a></td>
+							    <td><a href="#">19</a></td>
+							    <td class="calendar-weekend"><a href="#">20</a></td>
+							    <td class="calendar-weekend"><a href="#">21</a></td>
+							  </tr>
+							  <tr class="calendar-body__line">
+							    <td><a href="#">22</a></td>
+							    <td><a href="#">23</a></td>
+							    <td><a href="#">24</a></td>
+							    <td><a href="#">25</a></td>
+							    <td><a href="#">26</a></td>
+							    <td class="calendar-weekend"><a href="#">27</a></td>
+							    <td class="calendar-weekend"><a href="#">28</a></td>
+							  </tr>
+							  <tr class="calendar-body__line">
+							    <td><a href="#">29</a></td>
+							    <td><a href="#">30</a></td>
+							    <td  class="calendar-active calendar-active__mod"><a href="#">31</a></td>
+							    <td class="calendar-next-moth"><a href="#">1</a></td>
+							    <td class="calendar-next-moth"><a href="#">2</a></td>
+							    <td class="calendar-weekend calendar-next-moth"><a href="#">3</a></td>
+							    <td class="calendar-weekend calendar-next-moth"><a href="#">4</a></td>
+							  </tr>
+							</table>
+							</div>
+							
+						</div>
+						<!-- end sidebar-calendar -->
 
 					</div>
 					<!-- end column -->
