@@ -18,21 +18,24 @@ body
 	margin: 0 auto
 .container
 	@extend %in
-	+r(1024)
+	+r(1020)
 		width: 100%
 .row
 	+clr
 	margin-left: -20px
-	+r(1024)
+	+r(1020)
 		margin: 0 15px
 
 .column
 	float: left
 	width: 315px
 	margin-left: 20px
-	+r(1024)
-		width: 40%
-		margin: 0 5%
+	+r(1020)
+		width: 48%
+		margin-left: 0
+		margin-right: 4%
+		&:nth-child(2)
+			margin-right: 0
 	+r(768)
 		float: none
 		width: auto
@@ -48,7 +51,7 @@ body
 	margin-left: 20px
 	
 .column-mobile
-	+r(1024)
+	+r(1020)
 		width: auto
 		margin: 0 auto
 	
@@ -201,17 +204,22 @@ body
 .header
 	font-family: $font-alt
 	margin-bottom: 33px
+	+r(703)
+		margin-bottom: 0 
 	.header__in
 		@extend %in
 		padding-top: 34px
 		+clr
-		+r(1024)
+		+r(1020)
 			width: 96%
 			margin: 0 2%
 	.header__logo
 		float: left
-		width: 120px
+		width: 180px
 		height: 90px
+		+r(703)
+			float: none
+			margin: 0 auto
 		a
 			+hidetext
 		img
@@ -228,12 +236,12 @@ body
 		+clr
 		+r(900)
 			float: right
-			margin-top: 20px
-			margin-bottom: 60px
+			margin:  0 0 20px 0
 		+r(703)
 			float: none
 			margin-top: 0
 			margin-bottom: 20px
+			text-align: center
 			// width: 160px
 
 
@@ -242,10 +250,10 @@ body
 .social
 	display: inline-block
 	+clr
-	+r(703)
+	+r(900)
 		display: block
+		margin-bottom: 10px
 		float: right
-		+clr
 	.social__href
 		+hidetext
 		display: block
@@ -261,6 +269,7 @@ body
 		+r(704)
 			display: block
 			margin-bottom: 5px
+			display: none
 			&:last-child
 				margin-bottom: 0
 		
@@ -284,11 +293,14 @@ body
 	position: relative
 	margin-left: 20px
 	padding-top: 5px
-	+r(703)
+	+r(900)
 		display: block
-		padding-top: 120px
-		margin-left: 0
+	+r(703)
 		float: none
+		width: 200px
+		padding-top: 20px
+		margin: 0 
+		display: inline-block
 	.search__query
 		font-family: $font-alt
 		width: 302px
@@ -303,6 +315,10 @@ body
 		+box-shadow(0px -1px 1px -1px rgba(#000, .7))
 		&:focus
 			+placeholder-color(transparent)
+		+r(900)
+			width: 195px 
+			padding: 0 25px 0 12px
+			
 		+r(810)
 			width: 200px
 			padding: 0 25px 0 12px
@@ -313,9 +329,12 @@ body
 		right: 13px
 		+s(search)
 		+hidetext
+		+r(900)
+			top: 78%
+			right: 6px
 		+r(703)
-			top: 88%
-			left: 175px
+			top: 67%
+			right: 5px
 
 // User links & languages
 // --------------------------------------------------
@@ -324,15 +343,18 @@ body
 	display: inline-block
 	vertical-align: top
 	padding-top: 11px
+	+r(900)
+		padding-top: 10px
 	+r(704)
-		float: left
-		padding-top: 25px
-		
+		display: block
+		float: none
+		padding-top: 20px
+		text-align: center
 	ul
 		display: inline-block
 		+r(900)
 			margin-left: 10px
-		+r(704)	
+		+r(704)
 			margin-left: 0
 	li
 		display: inline-block
@@ -358,9 +380,6 @@ body
 // 	&:hover
 // 		cursor: pointer
 
-
-
-
 .lang
 	position: relative
 	padding-left: 22px
@@ -378,9 +397,8 @@ body
 		height: 18px
 		background: #7f7f7f
 		content: ""
-		+r(810)
+		+r(900)
 			display: none
-
 	li
 		margin-left: 7px
 		&:first-child
@@ -393,9 +411,11 @@ body
 	@extend %in
 	margin-bottom: 17px
 	+clr
-	+r(1024)
+	+r(1020)
 		width: 96%
 		margin: 1% 2%
+		display: none
+		
 	li
 		font-family: $font-alt-bold
 		&:first-child
@@ -425,7 +445,7 @@ body
 	border-bottom: 3px solid #d0d0ce
 	margin-bottom: 22px
 	position: relative
-	+r(1024)
+	+r(1020)
 		width: 96%
 		margin: 0 2%
 	+r(768)
@@ -583,7 +603,7 @@ body
 		@extend %in
 		padding-top: 35px
 		padding-bottom: 13px
-		+r(1024)
+		+r(1020)
 			width: 96%
 			margin: 0 2%
 	.footer__top
@@ -603,7 +623,7 @@ body
 			vertical-align: top
 			width: 200px
 			margin-left: 24px
-			+r(1024)
+			+r(1020)
 				width: 170px
 			+r(768)
 				margin-left: 5px
@@ -630,8 +650,6 @@ body
 			margin-left: 0
 		+r(768)
 			float: left
-
-
 		.social
 			margin-left: -3px
 	.footer__copy
@@ -685,16 +703,16 @@ body
 					color: #0f0e0e
 					margin-right: 24px
 					+r(768)
-						margin-right: 15px
+						margin-right: 10px
 				&:nth-child(3)
 					color: #6f6f70
 					margin-right: 24px
 					+r(768)
-						margin-right: 15px
+						margin-right: 10px
 					&:before
 						position: absolute
 						top: 1px
-						left: -12px
+						left: -8px
 						height: 15px
 						width: 1px
 						background: #6f6f70
@@ -703,7 +721,7 @@ body
 					&:before
 						position: absolute
 						top: 1px
-						left: -12px
+						left: -8px
 						height: 15px
 						width: 1px
 						background: #6f6f70
@@ -717,6 +735,10 @@ body
 			line-height: 18px
 			text-decoration: none
 			span
+				display: inline-block
+				padding: 2px 13px 4px
+				background-color: #f3f2ef
+				border-radius: 3px
 				color: #fa2f00
 	&__mod
 		&__title
@@ -838,6 +860,8 @@ body
 	overflow: hidden
 	+r(900)
 		width: 100%
+	+r(703)
+		display: none
 
 	// +box
 	img
@@ -907,7 +931,7 @@ body
 .caro-articles
 	margin: 0 50px
 	position: relative
-	+r(1024)
+	+r(1020)
 		width: 550px
 		margin: 0 auto
 	+r(768)
@@ -951,7 +975,7 @@ body
 	@extend %gbox
 	.container
 		padding: 20px 0 10px
-		+r(1024)
+		+r(1020)
 			width: 96%
 			margin-left: 2%
 			margin-right: 2%
@@ -960,7 +984,7 @@ body
 		color: #dadbdd
 	.report__head
 		margin-bottom: 25px
-		+r(1024)
+		+r(1020)
 			text-align: center
 	.report__headicon
 		position: relative
@@ -971,7 +995,7 @@ body
 	.report__left
 		float: left
 		width: 480px
-		+r(1024)
+		+r(1020)
 			float: none
 			margin: 0 auto
 		+r(500)
@@ -982,7 +1006,7 @@ body
 	.report__right
 		float: right
 		width: 490px
-		+r(1024)
+		+r(1020)
 			float: none
 			margin: 0 auto
 			max-width: 100%
@@ -1068,24 +1092,23 @@ body
 	@include box-shadow(0 1px 3px rgba(0,0,0,.5))
 	//@include background-image(linear-gradient(bottom, #f8f8f8 0%, #fff 100%))
 	background-color: #37373e
-	+r(1024)
+	+r(1020)
 		width: 96%
-		margin-left: 2%
-		margin-right: 2%
-		margin-top: 20px
+		margin: 20px 1.6% 0 
 	+r(768)
+		margin: 20px 2% 0 
 		background-color: #FFF
 
 	.topsection__left
 		float: left
 		width: 655px
-		+r(1024)
+		+r(1020)
 			width: 65%
 		+r(768)
 			width: 100%
 	.topsection__right
 		overflow: hidden
-		+r(1024)
+		+r(1020)
 			width: 35%
 		+r(768)
 			display: none
@@ -1147,7 +1170,7 @@ body
 			border-top: 1px solid white
 			width: 360px
 			margin-left: -20px
-			+r(1024)
+			+r(1020)
 				width: auto
 				margin-left: 0
 		&__title
@@ -1273,9 +1296,6 @@ body
 					padding-right: 0
 					overflow: hidden
 					text-overflow: ellipsis
-
-
-
 			.article__title
 				color: #dadbdd
 			.article__meta li
@@ -1284,8 +1304,8 @@ body
 .article
 	font-family: $font-alt
 	padding: 10px 0 25px
-	+r(1024)
-		width: 90%
+	+r(1020)
+		width: 100%
 	+r(768)
 		width: 100%
 	&.article_lg
@@ -1300,7 +1320,7 @@ body
 			width: 318px
 			height: 211px
 			margin-right: 22px
-			+r(1024)
+			+r(1020)
 				width: 300px
 			+r(768)
 				float: none
@@ -1313,8 +1333,6 @@ body
 				max-height: none
 		.article__txt
 			overflow: hidden
-
-
 		.article__meta
 			position: static
 			li
@@ -1327,7 +1345,7 @@ body
 		.article__info
 			height: 375px
 			width: 100%
-			+r(1024)
+			+r(1020)
 				width: 111%
 		.article__picture
 			&:before
@@ -1336,6 +1354,8 @@ body
 			color: #fff
 			font-size: 20px
 			margin-bottom: 15px
+			+r(1020)
+				padding-right: 45px
 			+r(500)
 				font-size: 14px
 
@@ -1388,7 +1408,7 @@ body
 		height: 210px
 		overflow: hidden
 		@include box-shadow(0 1px 3px rgba(0,0,0,.4))
-		+r(768)
+		+r(1020)
 			width: auto
 			height: auto
 	.article__picture
@@ -1430,9 +1450,9 @@ body
 			color: #dadbdd
 			padding: 0 11px
 			line-height: 1
-			+r(900)
-				font-size: 11px
-				padding: 0 5px
+			// +r(900)
+			// 	font-size: 11px
+			// 	padding: 0 5px
 			a
 				color: #dadbdd
 				text-decoration: none
@@ -1440,8 +1460,8 @@ body
 					text-decoration: underline
 			&:first-child
 				padding: 0 11px 0 0
-				+r(900)
-					padding: 0 5px 0 0
+				// +r(900)
+				// 	padding: 0 5px 0 0
 				&:before
 					content: none
 			&:before
@@ -1460,7 +1480,7 @@ body
 			color: #373636
 			line-height: 1.2
 			margin-top: 12px
-			+r(1024)
+			+r(1020)
 				font-size: 12px
 			+r(900)
 				font-size: 11px
@@ -1472,22 +1492,19 @@ body
 		font-size: 15px
 		line-height: 1.2
 		color: #0f0e0e
-		+r(1024)
-			font-size: 12px
 		+r(900)
-			font-size: 11px
 			width: auto
 		a
 			color: inherit
 			text-decoration: none
 
 .main-mobile
-	+r(1024)
+	+r(1020)
 		width: 98%
 		margin: 0 2%
 
 .sidebar-mobile
-	+r(1024)
+	+r(1020)
 		width: 200px
 		float: none
 
@@ -1550,7 +1567,7 @@ body
 		li
 			font-weight: bold
 			margin-bottom: 5px
-			+r(1024)
+			+r(1020)
 				display: inline-block
 				margin-right: 10px
 			&.cabinet__message
@@ -1615,19 +1632,26 @@ body
 	.h-bordered_black
 		padding-bottom: 8px
 		margin-right: 23%
-		margin-bottom: 20px
+		margin-bottom: 25px
 		span
 			color: #fff
 			background-color: #000
 			padding: 8px
 
 	.category__lists-item
-		margin: 20px 0
+		padding: 10px 0 10px 0
 		font-family: $font-alt
 		font-size: 14px
 		font-weight: 400
 		line-height: 19px
+		border-bottom: 1px solid #cfcfcf
 		+clr
+		&:first-child
+			padding: 0 0 10px 0
+		&:last-child
+			border-bottom: none
+		 
+
 	&__left-side
 		display: inline-block
 		float: left
@@ -1646,8 +1670,12 @@ body
 			text-decoration: none
 			display: block
 		.category__text-preview
-			padding: 0 15px
+			display: inline-block
+			padding: 5px 13px
+			background-color: #f3f2ef
+			border-radius: 3px
 			color: #fa2f00
+			margin-right: 5px
 
 
 
@@ -1722,7 +1750,7 @@ body
 	p
 		font-size: 16px
 		margin-bottom: 20px
-		+r(1024)
+		+r(1020)
 			text-align: justify
 
 // MEDIA
@@ -1829,7 +1857,7 @@ body
 			+r(768)
 				height: auto
 	.materials__cols
-		+r(1024)
+		+r(1020)
 			width: 650px
 			margin: 0 auto
 		+r(768)
@@ -2007,7 +2035,7 @@ body
 
 	.slideshow__slidepreview
 		position: relative
-		+r(1024)
+		+r(1020)
 			width: 660px
 			margin: 0 auto
 		+r(768)
@@ -2317,7 +2345,7 @@ body
 	bottom: 15px
 	right: 25px
 	+s(up)
-	+r(1024)
+	+r(1020)
 		right: 50px
 	+r(500)
 		right: 20px
@@ -2325,14 +2353,14 @@ body
 .scrollup__mod
 	right: 143px
 	bottom: 320px
-	+r(1024)
+	+r(1020)
 		bottom: 25px
 		right: 10px
 
 // SIDEBAR-FOTO
 .nav-slide
 	margin: 0 11px
-	+r(1024)
+	+r(1020)
 		width: 96% !important
 	+r(355)
 		width: 200px !important
@@ -2359,7 +2387,7 @@ body
 		width: 37px
 		height: 50px
 		background-color: rgba(0,0,0,0.6)
-		+r(1024)
+		+r(1020)
 			right: -10px
 		i
 			display: block
@@ -2376,7 +2404,7 @@ body
 		text-align: center
 		width: 98%
 		height: 98%
-		+r(1024)
+		+r(1020)
 			width: 100%
 .sidebar-slider__footer
 	padding: 0 10px
@@ -2403,7 +2431,7 @@ body
 .section-read-more
 	float: right
 	padding: 25px
-	margin-left: 25px
+	margin: 0 0 20px 25px
 	width: 291px
 	background-color: #f3f2ef
 	+r(768)
